@@ -1,0 +1,375 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to right, #6a11cb, #2575fc);
+	color: #fff;
+}
+
+header {
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+header h1 {
+	margin: 0;
+	padding: 1rem;
+	text-align: center;
+}
+
+
+header .logo {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	/* More space from the top */
+	margin-left: 20px;
+	/* More space from the left */
+}
+
+header .logo img {
+	height: 60px;
+	margin-right: 15px;
+}
+
+header .logo h1 {
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+nav ul li {
+	display: inline;
+	margin: 0 1rem;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+main {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	min-height: calc(100vh - 150px);
+}
+
+section {
+	padding: 2rem;
+	text-align: center;
+}
+
+footer {
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	padding: 1rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.contact-container {
+	background: rgba(0, 0, 0, 0.5);
+	/* Semi-transparent background */
+	border-radius: 10px;
+	/* Rounded corners */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+	/* Subtle shadow effect */
+	padding: 30px;
+	max-width: 800px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* Center content vertically */
+	align-items: center;
+	/* Center content horizontally */
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.contact-container h2 {
+	margin-bottom: 20px;
+	color: #fff;
+}
+
+.contact-container form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+	/* Ensure the form uses the full width of the container */
+}
+
+.contact-container label {
+	color: #fff;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.contact-container input,
+.contact-container textarea {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: calc(100% - 22px);
+	/* Adjust for padding */
+	max-width: 100%;
+}
+
+.contact-container button {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background: #2575fc;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.contact-container button:hover {
+	background: #6a11cb;
+}
+
+.contact-details {
+	margin-top: 30px;
+	color: #fff;
+}
+
+.contact-details p {
+	margin: 5px 0;
+}
+
+.video-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.video {
+	flex: 1 1 45%;
+	/* Adjust the percentage as needed to fit the screen */
+	max-width: 320px;
+	background: rgba(0, 0, 0, 0.5);
+	/* Background color for each video box */
+	border-radius: 10px;
+	/* Rounded corners */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+	/* Subtle shadow effect */
+	padding: 10px;
+	margin: 10px;
+}
+
+.video iframe {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	/* Rounded corners for the video */
+}
+
+
+.image-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	/* Increased gap between images */
+	justify-content: center;
+}
+
+.image-box {
+	position: relative;
+	max-width: 300px;
+	background: rgba(0, 0, 0, 0.5);
+	/* Background color for the image box */
+	border-radius: 10px;
+	/* Rounded corners */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+	/* Subtle shadow effect */
+	overflow: hidden;
+	/* Ensure the watermark stays within the box */
+	padding: 10px;
+	margin: 10px;
+}
+
+.image-box img {
+	width: 100%;
+	height: auto;
+	display: block;
+	cursor: pointer;
+	/* Make images clickable */
+}
+
+.watermark {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: rgba(255, 255, 255, 0.7);
+	/* Semi-transparent white color */
+	font-family: 'Brush Script MT', cursive;
+	/* Calligraphy style font */
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	/* Add a subtle shadow for better visibility */
+	pointer-events: none;
+	/* Ensure the watermark is not interactive */
+}
+
+
+/* Modal styles */
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1000;
+	/* Sit on top */
+	padding-top: 20px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9);
+	/* Black w/ opacity */
+}
+
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-height: 650px;
+	/* Max height for the enlarged image */
+	max-width: 450px;
+	/* Max width for the enlarged image */
+}
+
+.close {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	color: #fff;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.intro p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	text-align: justify;
+	/* Justify the text */
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.quotes {
+	margin: 10px auto;
+	max-width: 800px;
+	text-align: left;
+	padding: 10px;
+}
+
+.quotes h3 {
+	margin-bottom: 20px;
+}
+
+.quote {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+	/* Gradient background */
+	padding: 10px;
+	border-radius: 10px;
+	opacity: 0;
+	/* Initially hidden */
+	transform: translateX(-100%);
+	/* Initially off the screen */
+	animation: slideIn 1s ease-in-out forwards;
+	/* Slide in animation */
+}
+
+#quote1 {
+	animation-delay: 0s;
+}
+
+#quote2 {
+	animation-delay: 1s;
+}
+
+#quote3 {
+	animation-delay: 2s;
+}
+
+#quote4 {
+	animation-delay: 3s;
+}
+
+#quote5 {
+	animation-delay: 4s;
+}
+
+@keyframes slideIn {
+	to {
+		opacity: 1;
+		/* Fully visible */
+		transform: translateX(0);
+		/* Move to the original position */
+	}
+}
+
+.quote img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.quote p {
+	font-size: 1.1rem;
+	line-height: 1.5;
+	margin: 0;
+	color: #fff;
+	/* White text color for better contrast */
+	font-family: Georgia, serif;
+	/* Handwritten font style */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0.1;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
