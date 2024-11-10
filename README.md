@@ -1,2 +1,3 @@
 # Prativa on Canvas
-Website language US English
+
+**Note:** The US English version of Prativa on Canvas website.
