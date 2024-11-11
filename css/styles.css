@@ -134,6 +134,12 @@ footer {
 	margin-bottom: 5px;
 }
 
+.contact-container label p {
+	color: #fff;
+	text-align: justify;
+	margin-bottom: 5px;
+}
+
 .contact-container input,
 .contact-container textarea {
 	padding: 10px;
