@@ -31,6 +31,7 @@ header .logo {
 
 header .logo img {
 	height: 50px;
+	border-radius: 50%; /* Make the image rounded */
 }
 
 header .logo h1 {
