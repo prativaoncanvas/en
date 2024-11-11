@@ -20,19 +20,17 @@ header h1 {
 	text-align: center;
 }
 
-
 header .logo {
 	display: flex;
 	align-items: center;
-	margin-top: 20px;
+	margin-top: 10px;
 	/* More space from the top */
 	margin-left: 20px;
 	/* More space from the left */
 }
 
 header .logo img {
-	height: 60px;
-	margin-right: 15px;
+	height: 50px;
 }
 
 header .logo h1 {
