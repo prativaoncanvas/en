@@ -11,7 +11,9 @@ const imageFiles = [
 ];
 
 // Function to display images
-function loadPaintings() {
+function renderPaintings() {
+	const container = document.querySelector(".image-container");
+	container.innerHTML = ""; // Clear any existing content
 
 	const lang = document.documentElement.lang;
 	let imageLocation = `arts/`;
@@ -19,7 +21,6 @@ function loadPaintings() {
 		imageLocation = `/en/arts/`;
 	}
 
-	const container = document.getElementById("image-container");
 	imageFiles.forEach(fileName => {
 
 		const imageBox = document.createElement("div");
@@ -51,6 +52,9 @@ function loadPaintings() {
 		}
 	});
 }
+
+// Call renderPaintings when the page loads
+document.addEventListener("DOMContentLoaded", renderPaintings);
 
 // Define the function to be called on click
 function enlargeImage(imgSource) {
