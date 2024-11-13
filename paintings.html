@@ -10,7 +10,7 @@
       <link rel="shortcut icon" href="favicon/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
       <link rel="manifest" href="favicon/site.webmanifest" />
-      <script src="scripts/modal.js"></script>
+      <script src="scripts/paintings.js"></script>
    </head>
    <body>
       <header>
@@ -34,46 +34,21 @@
          <section id="paintings">
             <div class="content">
                <h1>My Paintings</h1>
-               <div class="image-container">
-                  <div class="image-box">
+               <div id="image-container" class="image-container">
+                  <!-- <div class="image-box">
                      <img src="arts/art-1.jpg" alt="Description of image 1" class="clickable-image" onClick="enlargeImage(this);">
                      <div class="watermark">Prativa on Canvas</div>
-                  </div>
-                  <div class="image-box">
-                     <img src="arts/art-2.jpg" alt="Description of image 2" class="clickable-image" onClick="enlargeImage(this);">
-                     <div class="watermark">Prativa on Canvas</div>
-                  </div>
-                  <div class="image-box">
-                     <img src="arts/art-3.jpg" alt="Description of image 1" class="clickable-image" onClick="enlargeImage(this);">
-                     <div class="watermark">Prativa on Canvas</div>
-                  </div>
-                  <div class="image-box">
-                     <img src="arts/art-4.jpg" alt="Description of image 2" class="clickable-image" onClick="enlargeImage(this);">
-                     <div class="watermark">Prativa on Canvas</div>
-                  </div>
-                  <div class="image-box">
-                     <img src="arts/art-5.jpg" alt="Description of image 1" class="clickable-image" onClick="enlargeImage(this);">
-                     <div class="watermark">Prativa on Canvas</div>
-                  </div>
-                  <div class="image-box">
-                     <img src="arts/art-6.jpg" alt="Description of image 2" class="clickable-image" onClick="enlargeImage(this);">
-                     <div class="watermark">Prativa on Canvas</div>
-                  </div>
-                  <div class="image-box">
-                     <img src="arts/art-7.jpg" alt="Description of image 1" class="clickable-image" onClick="enlargeImage(this);">
-                     <div class="watermark">Prativa on Canvas</div>
-                  </div>
-                  <div class="image-box">
-                     <img src="arts/art-8.jpg" alt="Description of image 2" class="clickable-image" onClick="enlargeImage(this);">
-                     <div class="watermark">Prativa on Canvas</div>
-                  </div>
-                  <!-- Modal to display enlarged image -->
-                  <div id="modal" class="modal">
-                     <span class="close" onClick="closeImage();">&times;</span>
-                     <img class="modal-content" id="modal-img">
-                     <div class="watermark">Prativa on Canvas</div>
-                  </div>
+                  </div> -->
                </div>
+               <!-- Modal to display enlarged image -->
+               <div id="modal" class="modal">
+                  <span class="close" onClick="closeImage();">&times;</span>
+                  <img class="modal-content" id="modal-img">
+                  <div class="watermark"></div>
+               </div>
+               <script>
+                  loadPaintings();
+               </script>
             </div>
          </section>
       </main>
