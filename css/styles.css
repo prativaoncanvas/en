@@ -257,7 +257,7 @@ footer {
 	/* Stay in place */
 	z-index: 1000;
 	/* Sit on top */
-	padding-top: 200px;
+	padding-top: 20px;
 	/* Location of the box */
 	left: 0;
 	top: 0;
@@ -285,7 +285,7 @@ footer {
 
 .close {
 	position: absolute;
-	top: 200px;
+	top: 20px;
 	right: 45px;
 	color: #fff;
 	font-size: 40px;
