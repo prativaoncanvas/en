@@ -1,7 +1,7 @@
 // Step 1: Array of image file names (assuming they are all in the 'img' folder)
 const imageFiles = [
-	"art-1.jpg",
 	"art-2.jpg",
+	"art-1.jpg",
 	"art-3.jpg",
 	"art-4.jpg",
 	"art-5.jpg",
