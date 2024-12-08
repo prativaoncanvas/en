@@ -35,13 +35,16 @@
          <section id="contact">
             <h1>Contact Me</h1>
             <div class="contact-container">
-            <form onsubmit="redirectToPage(event)">
+            <form action="https://docs.google.com/forms/d/1O9eXKaYBQcA1n9RoW9Bek0MYoEK5-Nt0C0SWqOt5ewo/formResponse" method="POST" onsubmit="handleSubmit(event)">
                <label for="name">Name:</label>
-               <input type="text" id="name" name="name" required>
+               <input type="text" id="name" name="entry.2005620554" required>
                <label for="email">Email:</label>
-               <input type="email" id="email" name="email" required>
-               <label for="reason">Reason for Contacting:</label>
-               <textarea id="reason" name="reason" required></textarea>
+               <input type="email" id="email" name="entry.1045781291" required>
+               <label for="reason" class="tooltip label-required">
+               Your Query:
+               <span class="tooltip-text">Please leave your contact number so that I can connect with you.</span>
+               </label>
+               <textarea id="reason" name="entry.1065046570" required></textarea>
                <button type="submit">Submit</button>
             </form>
             <div class="contact-details">
