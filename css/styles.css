@@ -82,7 +82,7 @@ main {
 }
 
 section {
-	padding: 0 2rem;
+	padding: 0 1rem;
 	text-align: center;
 }
 
@@ -129,6 +129,12 @@ footer {
 	/* Ensure the form uses the full width of the container */
 }
 
+.required-label::after {
+	content: "*";
+	color: red;
+	font-weight: bold;
+}
+
 .contact-container label {
 	color: #fff;
 	text-align: left;
@@ -149,51 +155,6 @@ footer {
 	width: calc(100% - 22px);
 	/* Adjust for padding */
 	max-width: 100%;
-}
-
-/* Tooltip styling */
-.tooltip {
-	position: relative;
-	display: inline-block;
-}
-
-.tooltip .tooltip-text {
-	visibility: hidden;
-	width: 250px;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	text-align: center;
-	border-radius: 5px;
-	padding: 5px;
-	position: absolute;
-	bottom: 100%;
-	/* Position above the label */
-	left: 5;
-	/* Align with the start of the label */
-	margin-bottom: 1px;
-	/* Add a small gap */
-	z-index: 1;
-	opacity: 0;
-	transition: opacity 0.3s;
-}
-
-/* Show tooltip on label hover */
-.tooltip:hover .tooltip-text {
-	visibility: visible;
-	opacity: 1;
-}
-
-/* Add red asterisk as superscript for required fields */
-.label-required {
-	position: relative;
-}
-
-.label-required::after {
-	content: "^";
-	color: red;
-	font-weight: bold;
-	font-size: 1.0em;
-	margin-left: -4px;
 }
 
 .contact-container button {
