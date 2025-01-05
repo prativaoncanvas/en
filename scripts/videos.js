@@ -18,8 +18,8 @@ function renderVideos() {
 		videoDiv.classList.add("video");
 
 		const iframe = document.createElement("iframe");
-		iframe.width = "426";
-		iframe.height = "240";
+		iframe.width = "560";
+		iframe.height = "315";
 		iframe.src = url;
 		iframe.title = "YouTube video player";
 		iframe.frameBorder = "0";

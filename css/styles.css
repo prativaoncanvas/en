@@ -208,14 +208,14 @@ footer {
 .video-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: 10px;
 	justify-content: center;
 }
 
 .video {
 	flex: 1 1 45%;
 	/* Adjust the percentage as needed to fit the screen */
-	max-width: 320px;
+	max-width: 560px;
 	background: rgba(0, 0, 0, 0.5);
 	/* Background color for each video box */
 	border-radius: 10px;
@@ -228,7 +228,7 @@ footer {
 
 .video iframe {
 	width: 100%;
-	height: auto;
+	/* height: auto; */
 	border-radius: 8px;
 	/* Rounded corners for the video */
 }
@@ -237,14 +237,14 @@ footer {
 .image-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 10px;
 	/* Increased gap between images */
 	justify-content: center;
 }
 
 .image-box {
 	position: relative;
-	max-width: 300px;
+	max-width: 400px;
 	background: rgba(0, 0, 0, 0.5);
 	/* Background color for the image box */
 	border-radius: 10px;
