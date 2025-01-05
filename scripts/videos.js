@@ -1,11 +1,10 @@
 const videoUrls = [
-	"https://www.youtube.com/embed/9ASmdzfAH3M?si=AM7qqa-NNE1JiQm2",
-	"https://www.youtube.com/embed/znQx3vOhEG4?si=tS8mZIdKnU2qktEq",
-	"https://www.youtube.com/embed/NeBRCC-VXxw?si=A4k2L9UXk_jbwVUf",
-	"https://www.youtube.com/embed/GbmaOsTI2ek?si=r0Hc6MFv2na-kCbr",
+	"https://www.youtube.com/embed/WXoirl1ByzQ?si=w2WPf0TfQixkWkO9",
+	"https://www.youtube.com/embed/5lRLCOIR4r0?si=NdyMrEx7DlKz1E7N",
 	"https://www.youtube.com/embed/dNkMJhp54C0?si=hDR76oND6q9gv5_4",
-	"https://www.youtube.com/embed/q8Zbi9PiFHY?si=pqrgrI_JcprE5_1W",
-	"https://www.youtube.com/embed/eBhEW312zHo?si=JwowI7wvFWXBJPBD"
+	"https://www.youtube.com/embed/znQx3vOhEG4?si=tS8mZIdKnU2qktEq",
+	"https://www.youtube.com/embed/4CtPodTGMFc?si=axPwYgHwqTQ31D4Z",
+	"https://www.youtube.com/embed/q8Zbi9PiFHY?si=pqrgrI_JcprE5_1W"
 ];
 
 // Function to render videos
