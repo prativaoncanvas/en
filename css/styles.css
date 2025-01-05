@@ -208,12 +208,8 @@ footer {
 .video-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 20px;
 	justify-content: center;
-	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
 }
 
 .video {
@@ -226,6 +222,8 @@ footer {
 	/* Rounded corners */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 	/* Subtle shadow effect */
+	padding: 10px;
+	margin: 10px;
 }
 
 .video iframe {
@@ -242,10 +240,6 @@ footer {
 	gap: 30px;
 	/* Increased gap between images */
 	justify-content: center;
-	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
 }
 
 .image-box {
