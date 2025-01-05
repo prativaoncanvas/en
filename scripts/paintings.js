@@ -1,11 +1,19 @@
 // Step 1: Array of image file names (assuming they are all in the 'img' folder)
 const imageFiles = [
-	"art-2.jpg",
+	"art-000.jpg",
+	"art-00.jpg",
 	"art-1.jpg",
+	"art-11.jpg",
+	"art-2.jpg",
+	"art-22.jpg",
 	"art-3.jpg",
+	"art-33.jpg",
 	"art-4.jpg",
+	"art-44.jpg",
 	"art-5.jpg",
+	"art-55.jpg",
 	"art-6.jpg",
+	"art-66.jpg",
 	"art-7.jpg",
 	"art-8.jpg"
 ];
