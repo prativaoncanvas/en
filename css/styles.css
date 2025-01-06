@@ -272,6 +272,38 @@ footer.hidden {
 	/* Make images clickable */
 }
 
+.publication-container {
+	display: flex;
+	width: 100%;
+	max-width: 800px;
+	height: 600px; /* Ensure consistent height */
+	justify-content: center;
+	align-items: center; /* Center vertically */
+	margin: 0 auto; /* Center horizontally */
+	padding-bottom: 20px;
+}
+
+.publication {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	height: 600px;
+	background: rgba(0, 0, 0, 0.5); /* Background color for the image box */
+	border-radius: 10px; /* Rounded corners */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Subtle shadow effect */
+	overflow: hidden; /* Ensure the watermark stays within the box */
+	padding: 10px;
+	margin: 10px;
+}
+
+.publication iframe {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	display: block;
+	cursor: pointer; /* Make images clickable */
+}
+
 .watermark {
 	position: absolute;
 	bottom: 20px;
