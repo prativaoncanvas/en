@@ -248,6 +248,28 @@ footer.hidden {
 }
 
 
+.tag-container {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-right: 10px;
+}
+
+.tag {
+	background: #4e658d;
+	color: white;
+	border: none;
+	padding: 5px 8px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.tag:hover, .tag.active {
+	background: #141a28;
+}
+
+
 .image-container {
 	display: flex;
 	flex-wrap: wrap;

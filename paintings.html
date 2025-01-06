@@ -12,6 +12,7 @@
       <link rel="manifest" href="favicon/site.webmanifest" />
       <script src="scripts/header.js"></script>
       <script src="scripts/paintings.js"></script>
+      <script src="scripts/art-filter.js"></script>
       <script src="scripts/footer.js"></script>
    </head>
    <body>
@@ -20,8 +21,16 @@
          <section id="paintings">
             <div class="content">
                <h1>My Paintings</h1>
+               <!-- Tags for Filtering -->
+               <div class="tag-container">
+                  <button class="tag" data-tag="all">all</button>
+                  <button class="tag" data-tag="pencil">pencil</button>
+                  <button class="tag" data-tag="watercolor">watercolor</button>
+                  <button class="tag" data-tag="sketch">sketch</button>
+                  <button class="tag" data-tag="other">other</button>
+               </div>
                <div class="image-container">
-                  <!-- <div class="image-box">
+                  <!-- <div class="image-box" data-tag="sketch">
                      <img src="arts/art-1.jpg" alt="Description of image 1" class="clickable-image" onClick="enlargeImage(this);">
                      <div class="watermark">Prativa on Canvas</div>
                      </div> -->

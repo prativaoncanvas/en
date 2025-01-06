@@ -92,6 +92,27 @@ const imageFiles = [
 	"wide-4.jpg"
 ];
 
+const imageTags = {
+    "art-1.jpg": "pencil",
+    "art-2.jpg": "pencil",
+    "art-3.jpg": "watercolor",
+    "art-4.jpg": "sketch",
+    "art-5.jpg": "watercolor",
+    "art-6.jpg": "pencil",
+    "art-7.jpg": "sketch",
+    "art-8.jpg": "pencil",
+    "art-9.jpg": "watercolor",
+    "art-10.jpg": "sketch",
+    "mini-1.jpg": "sketch",
+    "mini-2.jpg": "pencil",
+    "mini-3.jpg": "watercolor",
+    "mini-4.jpg": "sketch",
+    "wide-1.jpg": "watercolor",
+    "wide-2.jpg": "sketch",
+    "wide-3.jpg": "pencil",
+    "wide-4.jpg": "watercolor"
+};
+
 // Function to display images
 function renderPaintings() {
 	const container = document.querySelector(".image-container");
@@ -107,6 +128,10 @@ function renderPaintings() {
 
 		const imageBox = document.createElement("div");
 		imageBox.classList.add("image-box");
+
+		// Set the data-tag attribute based on the image file name
+		const tag = imageTags[fileName] || "other"; // Default to "other" if no match
+		imageBox.setAttribute("data-tag", tag);
 
 		const img = document.createElement("img");
 		img.classList.add("clickable-image");
