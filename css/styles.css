@@ -96,6 +96,14 @@ footer {
 	transition: transform 0.3s ease-in-out;
 }
 
+footer p::after {
+	content: "© 2025 Prativa on Canvas"; /* Default (English) */
+}
+
+html:lang(bn) footer p::after {
+	content: "© ২০২৫ প্রতিভার ক্যানভাস"; /* Bengali */
+}
+
 footer.hidden {
 	transform: translateY(100%);
 }
