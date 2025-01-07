@@ -258,11 +258,27 @@ footer.hidden {
 .scroll-btn {
 	background: none;
 	border: none;
-	font-size: 24px;
+	font-size: 14px;
 	cursor: pointer;
-	color: #4e658d;
+	color: #ffffff;
 	padding: 0 10px;
 	display: none; /* Initially hide the arrows */
+}
+
+.scroll-btn.left-arrow::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f100"; /* Double left arrow icon */
+}
+
+.scroll-btn.right-arrow::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f101"; /* Double right arrow icon */
+}
+
+.scroll-btn.left-arrow, .scroll-btn.right-arrow {
+	display: inline-block;
 }
 
 .tag-container {
