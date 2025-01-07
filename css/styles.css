@@ -248,12 +248,35 @@ footer.hidden {
 }
 
 
+.tag-scroll-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	overflow: hidden;
+}
+
+.scroll-btn {
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	color: #4e658d;
+	padding: 0 10px;
+	display: none; /* Initially hide the arrows */
+}
+
 .tag-container {
 	display: flex;
-	justify-content: flex-end;
 	gap: 10px;
-	margin-right: 10px;
-	margin-left: 10px;
+	margin: 0 10px;
+	overflow-x: auto;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+	padding: 2px 0; /* Add some padding for better appearance */
+}
+
+.tag-container::-webkit-scrollbar {
+	display: none;
 }
 
 .tag {

@@ -22,3 +22,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const tagContainer = document.querySelector('.tag-container');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    const updateArrowVisibility = () => {
+        if (tagContainer.scrollWidth > tagContainer.clientWidth) {
+            leftArrow.style.display = 'block';
+            rightArrow.style.display = 'block';
+        } else {
+            leftArrow.style.display = 'none';
+            rightArrow.style.display = 'none';
+        }
+    };
+
+    leftArrow.addEventListener('click', () => {
+        tagContainer.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+
+    rightArrow.addEventListener('click', () => {
+        tagContainer.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+
+    window.addEventListener('resize', updateArrowVisibility);
+    updateArrowVisibility(); // Initial check when the page loads
+});
+
