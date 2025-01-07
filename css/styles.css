@@ -306,7 +306,7 @@ footer.hidden {
 	font-size: 14px;
 }
 
-.tag:hover, .tag.active {
+.tag.active {
 	background: #141a28;
 }
 
