@@ -262,7 +262,7 @@ footer.hidden {
 	font-size: 16px;
 	cursor: pointer;
 	color: #ffffff;
-	padding: 0 10px;
+	padding: 0 2px;
 	display: none; /* Initially hide the arrows */
 }
 
@@ -297,7 +297,7 @@ footer.hidden {
 }
 
 .tag {
-	background: #4e658d;
+	background: #538d9b;
 	color: white;
 	border: none;
 	padding: 5px 8px;

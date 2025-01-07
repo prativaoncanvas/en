@@ -1,10 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     const tags = document.querySelectorAll(".tag");
     const images = document.querySelectorAll(".image-box");
+    let selectedTag = "all"; // Initially, all images are shown
 
     tags.forEach(tag => {
         tag.addEventListener("click", function () {
-            const selectedTag = this.getAttribute("data-tag");
+            const currentTag = this.getAttribute("data-tag");
+
+            // If the same tag is clicked again, reset to show all images
+            if (selectedTag === currentTag) {
+                selectedTag = "all";
+                tags.forEach(t => t.classList.remove("active"));
+            } else {
+                selectedTag = currentTag;
+                // Update active tag style
+                tags.forEach(t => t.classList.remove("active"));
+                this.classList.add("active");
+            }
 
             // Show/hide images based on selected tag
             images.forEach(image => {
@@ -15,10 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     image.style.display = "none";
                 }
             });
-
-            // Update active tag style
-            tags.forEach(t => t.classList.remove("active"));
-            this.classList.add("active");
         });
     });
 });
