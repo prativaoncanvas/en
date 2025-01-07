@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const tags = document.querySelectorAll(".tag");
     const images = document.querySelectorAll(".image-box");
-    let selectedTag = "all"; // Initially, all images are shown
 
     tags.forEach(tag => {
+        let selectedTag = "all"; // Initially, all images are shown
         tag.addEventListener("click", function () {
             const currentTag = this.getAttribute("data-tag");
 
