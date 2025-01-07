@@ -7,14 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
         tag.addEventListener("click", function () {
             const currentTag = this.getAttribute("data-tag");
 
+            // Remove active tag immediately
+            tags.forEach(t => t.classList.remove("active"));
+
             // If the same tag is clicked again, reset to show all images
             if (selectedTag === currentTag) {
                 selectedTag = "all";
-                tags.forEach(t => t.classList.remove("active"));
             } else {
                 selectedTag = currentTag;
                 // Update active tag style
-                tags.forEach(t => t.classList.remove("active"));
                 this.classList.add("active");
             }
 
