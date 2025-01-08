@@ -436,7 +436,7 @@ footer.hidden {
 }
 
 .modal-content {
-	margin: auto;
+	margin: 80px auto; /* Space below the header */
 	display: block;
 	max-height: 100%;
 	/* Max height for the enlarged image */
@@ -446,8 +446,8 @@ footer.hidden {
 
 .close {
 	position: absolute;
-	top: 20px;
-	right: 45px;
+	top: 100px;
+	right: 10px;
 	color: #fff;
 	font-size: 40px;
 	font-weight: bold;
