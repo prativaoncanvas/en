@@ -219,6 +219,27 @@ footer.hidden {
 	/* Phone icon */
 }
 
+.social-links {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.social-links a {
+	font-size: 24px;
+	text-decoration: none;
+	transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+	transform: scale(1.5);
+}
+
+.social-links .youtube { color: #FF0000; }
+.social-links .facebook { color: #1877F2; }
+.social-links .instagram { color: #E4405F; }
+
 .video-container {
 	display: flex;
 	flex-wrap: wrap;
