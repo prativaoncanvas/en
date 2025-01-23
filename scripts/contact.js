@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
          return `
 				<div class="contact-details">
-				   <p class="address">Jacksonville, Florida, USA</p>
+				   <p class="address">Jacksonville, Florida, United States</p>
 				   <p class="email">prativadebsharma17@gmail.com</p>
 				   <p class="mobile">(904) 703-0713</p>
 				</div>
