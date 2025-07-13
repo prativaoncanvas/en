@@ -1,5 +1,13 @@
 // Step 1: Array of paintings with tags (assuming they are all in the 'img' folder)
 const paintings = [
+    { fileName: "art-39.jpg", tag: "acrylic" },
+    { fileName: "art-34.jpg", tag: "pencil" },
+    { fileName: "art-33.jpg", tag: "acrylic" },
+    { fileName: "art-35.jpg", tag: "pencil" },
+    { fileName: "art-36.jpg", tag: "pencil" },
+    { fileName: "art-37.jpg", tag: "pencil" },
+    { fileName: "art-38.jpg", tag: "acrylic" },
+    { fileName: "art-40.jpg", tag: "acrylic" },
     { fileName: "art-1.jpg", tag: "pencil" },
     { fileName: "art-2.jpg", tag: "pencil" },
     { fileName: "art-3.jpg", tag: "acrylic" },
