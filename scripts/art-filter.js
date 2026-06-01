@@ -1,21 +1,23 @@
 // ============================================================
-// Multi-select tag filter + tag-row scroll arrows
+// Single-select tag filter + tag-row scroll arrows
+// Selecting a tag automatically deselects any previously
+// selected tag. Re-clicking the active tag falls back to "all".
 // ============================================================
 
 document.addEventListener("DOMContentLoaded", function () {
     const tags = Array.from(document.querySelectorAll(".tag"));
     const allBtn = tags.find(t => t.getAttribute("data-tag") === "all");
 
-    // Helper to read currently selected tags (excluding "all")
-    function selectedTags() {
-        return tags
-            .filter(t => t.classList.contains("active") && t.getAttribute("data-tag") !== "all")
-            .map(t => t.getAttribute("data-tag"));
+    // Currently selected tag (single-select; "" means "all")
+    function selectedTag() {
+        const active = tags.find(t => t.classList.contains("active") &&
+                                      t.getAttribute("data-tag") !== "all");
+        return active ? active.getAttribute("data-tag") : "";
     }
 
     function applyFilter() {
-        const selected = selectedTags();
-        const showAll = selected.length === 0;
+        const selected = selectedTag();
+        const showAll = !selected;
 
         if (allBtn) {
             allBtn.classList.toggle("active", showAll);
@@ -30,8 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
             const boxTags = (box.getAttribute("data-tags") || "").split(",").filter(Boolean);
-            // OR logic: visible if any of its tags is in the selection
-            const match = boxTags.some(t => selected.includes(t));
+            const match = boxTags.includes(selected);
             box.style.display = match ? "" : "none";
             if (match) visible++;
         });
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     empty.id = "empty-state";
                     empty.className = "empty-state";
                     empty.setAttribute("data-testid", "empty-state");
-                    empty.textContent = "No paintings match the selected filters.";
+                    empty.textContent = "No paintings match the selected filter.";
                     container.parentNode.appendChild(empty);
                 }
                 empty.style.display = "block";
@@ -65,8 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 tags.forEach(x => x.classList.remove("active"));
                 allBtn.classList.add("active");
             } else {
-                this.classList.toggle("active");
-                if (allBtn) allBtn.classList.remove("active");
+                const wasActive = this.classList.contains("active");
+                // Single-select: clear everything first
+                tags.forEach(x => x.classList.remove("active"));
+                if (wasActive) {
+                    // Re-clicking the active tag falls back to "all"
+                    if (allBtn) allBtn.classList.add("active");
+                } else {
+                    this.classList.add("active");
+                }
             }
             applyFilter();
         });

@@ -70,7 +70,19 @@
         $("info-category").textContent = p.category;
         $("info-dimensions").textContent = p.dimensions;
         $("info-medium").textContent = p.medium;
-        $("info-price").textContent = p.price;
+
+        // Price row is controlled by the SHOW_PRICE flag in paintings.js
+        const priceRow = $("info-price-row");
+        if (priceRow) {
+            if (window.SHOW_PRICE) {
+                priceRow.style.display = "";
+                $("info-price").textContent = p.price;
+            } else {
+                priceRow.style.display = "none";
+                $("info-price").textContent = "";
+            }
+        }
+
         $("info-description").textContent = p.description;
 
         const tagsRow = $("info-tags");
@@ -167,6 +179,43 @@
             hide($("info-modal"));
             renderImageView();
             show($("lightbox"));
+        });
+
+        // Enquire — open user's mail client with a pre-filled template
+        $("info-enquire-btn").addEventListener("click", () => {
+            const p = window.PAINTINGS[currentIndex];
+            const email = window.ENQUIRE_EMAIL || "prativadebsharma17@gmail.com";
+            const subject = `Enquiry: ${p.title}`;
+            const lines = [
+                "Hello Prativa,",
+                "",
+                "I would like to enquire about the following painting:",
+                "",
+                `• Title       : ${p.title}`,
+                `• Reference ID: ${p.id}`,
+                `• Year        : ${p.year}`,
+                `• Category    : ${p.category}`,
+                `• Medium      : ${p.medium}`,
+                `• Dimensions  : ${p.dimensions}`
+            ];
+            if (window.SHOW_PRICE) lines.push(`• Listed price: ${p.price}`);
+            lines.push(
+                "",
+                "Could you please share availability, shipping options and next steps?",
+                "",
+                "My details:",
+                "  Name    : ",
+                "  Phone   : ",
+                "  City    : ",
+                "  Message : ",
+                "",
+                "Thank you!"
+            );
+            const body = lines.join("\n");
+            const href = "mailto:" + encodeURIComponent(email) +
+                         "?subject=" + encodeURIComponent(subject) +
+                         "&body=" + encodeURIComponent(body);
+            window.location.href = href;
         });
 
         // Click outside the inner card closes

@@ -25,7 +25,7 @@
                <h1>My Paintings</h1>
 
                <p class="filter-hint" data-testid="filter-hint">
-                  Filter based on tag(s). Click on <i class="fas fa-info-circle"></i> for gallery view and more details.
+                  Filter by tag. Click on <i class="fas fa-info-circle"></i> for gallery view and more details.
                </p>
 
                <div class="tag-scroll-container">
@@ -119,15 +119,20 @@
                   <div><dt>Category</dt><dd id="info-category" data-testid="info-category"></dd></div>
                   <div><dt>Dimensions</dt><dd id="info-dimensions" data-testid="info-dimensions"></dd></div>
                   <div><dt>Medium</dt><dd id="info-medium" data-testid="info-medium"></dd></div>
-                  <div><dt>Price</dt><dd id="info-price" data-testid="info-price"></dd></div>
+                  <div id="info-price-row"><dt>Price</dt><dd id="info-price" data-testid="info-price"></dd></div>
                </dl>
 
                <h3 class="info-section-title">About this work</h3>
                <p id="info-description" class="info-description" data-testid="info-description"></p>
 
-               <button id="info-view-btn" class="info-view-btn" data-testid="info-view-btn">
-                  <i class="fas fa-expand"></i> View fullscreen
-               </button>
+               <div class="info-actions">
+                  <button id="info-view-btn" class="info-view-btn" data-testid="info-view-btn">
+                     <i class="fas fa-expand"></i> View fullscreen
+                  </button>
+                  <button id="info-enquire-btn" class="info-enquire-btn" data-testid="info-enquire-btn">
+                     <i class="fas fa-envelope"></i> Enquire
+                  </button>
+               </div>
             </div>
          </div>
       </div>
