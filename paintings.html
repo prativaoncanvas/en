@@ -14,6 +14,7 @@
       <script src="scripts/header.js"></script>
       <script src="scripts/paintings.js"></script>
       <script src="scripts/art-filter.js"></script>
+      <script src="scripts/lightbox.js"></script>
       <script src="scripts/footer.js"></script>
    </head>
    <body>
@@ -22,10 +23,15 @@
          <section id="paintings">
             <div class="content">
                <h1>My Paintings</h1>
+
+               <p class="filter-hint" data-testid="filter-hint">
+                  Filter based on tag(s). Click on <i class="fas fa-info-circle"></i> for gallery view and more details.
+               </p>
+
                <div class="tag-scroll-container">
-                  <button class="scroll-btn left-arrow"></button>
-                  <div class="tag-container">
-                     <button class="tag active" data-tag="all">all</button>
+                  <button class="scroll-btn left-arrow" aria-label="Scroll tags left"></button>
+                  <div class="tag-container" data-testid="tag-container">
+                     <button class="tag active" data-tag="all" data-testid="tag-filter-all">all</button>
                      <button class="tag" data-tag="acrylic">acrylic</button>
                      <button class="tag" data-tag="pastel">pastel</button>
                      <button class="tag" data-tag="watercolor">watercolor</button>
@@ -33,22 +39,15 @@
                      <button class="tag" data-tag="sketch">sketch</button>
                      <button class="tag" data-tag="other">other</button>
                   </div>
-                  <button class="scroll-btn right-arrow"></button>
+                  <button class="scroll-btn right-arrow" aria-label="Scroll tags right"></button>
                </div>
-               <div class="image-container">
-                  <!-- <div class="image-box" data-tag="sketch">
-                     <img src="arts/art-1.jpg" alt="Description of image 1" class="clickable-image" onClick="enlargeImage(this);">
-                     <div class="watermark">Prativa on Canvas</div>
-                     </div> -->
-               </div>
-               <!-- Modal to display enlarged image -->
-               <div id="modal" class="modal">
-                  <span class="close" onClick="closeImage();">&times;</span>
-                  <img class="modal-content" id="modal-img">
-                  <div class="watermark"></div>
+
+               <div class="image-container" data-testid="paintings-grid">
+                  <!-- cards injected by paintings.js -->
                </div>
             </div>
          </section>
+
          <section id="publications">
             <div class="content">
                <h2>My Publications</h2>
@@ -56,13 +55,83 @@
                   <div class="publication">
                      <iframe src="publications/Jagriti_2024.pdf"></iframe>
                   </div>
-				  <div class="publication">
+                  <div class="publication">
                      <iframe src="publications/JAGRITI_2025.pdf"></iframe>
                   </div>
                </div>
             </div>
          </section>
       </main>
+
+      <!-- ===== Fullscreen lightbox ===== -->
+      <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" data-testid="lightbox">
+         <button class="lb-icon-btn lb-close" data-close-modal aria-label="Close" data-testid="lightbox-close">
+            <i class="fas fa-times"></i>
+         </button>
+         <button id="lightbox-prev" class="lb-nav lb-nav-prev" aria-label="Previous painting" data-testid="lightbox-prev">
+            <i class="fas fa-chevron-left"></i>
+         </button>
+         <button id="lightbox-next" class="lb-nav lb-nav-next" aria-label="Next painting" data-testid="lightbox-next">
+            <i class="fas fa-chevron-right"></i>
+         </button>
+
+         <div class="lb-stage">
+            <img id="lightbox-img" class="lb-image" alt="" data-testid="lightbox-image"/>
+         </div>
+
+         <div class="lb-footer">
+            <div class="lb-meta">
+               <span id="lightbox-title" class="lb-title" data-testid="lightbox-title"></span>
+               <span id="lightbox-counter" class="lb-counter" data-testid="lightbox-counter"></span>
+            </div>
+            <button id="lightbox-info-btn" class="lb-info-btn" data-testid="lightbox-info-btn">
+               <i class="fas fa-info-circle"></i> View details
+            </button>
+         </div>
+
+         <div id="lightbox-thumbs" class="lb-thumbs"></div>
+      </div>
+
+      <!-- ===== Info modal ===== -->
+      <div id="info-modal" class="info-modal" role="dialog" aria-modal="true" data-testid="info-modal">
+         <button class="lb-icon-btn lb-close" data-close-modal aria-label="Close" data-testid="info-close">
+            <i class="fas fa-times"></i>
+         </button>
+         <button id="info-prev" class="lb-nav lb-nav-prev" aria-label="Previous painting" data-testid="info-prev">
+            <i class="fas fa-chevron-left"></i>
+         </button>
+         <button id="info-next" class="lb-nav lb-nav-next" aria-label="Next painting" data-testid="info-next">
+            <i class="fas fa-chevron-right"></i>
+         </button>
+
+         <div class="info-card" data-testid="info-card">
+            <div class="info-media">
+               <img id="info-hero-img" class="info-hero-img" alt="" data-testid="info-hero-image"/>
+               <div id="info-photos" class="info-photos"></div>
+            </div>
+            <div class="info-body">
+               <h2 id="info-title" class="info-title" data-testid="info-title"></h2>
+
+               <div id="info-tags" class="info-tags-row" data-testid="info-tags"></div>
+
+               <dl class="info-grid">
+                  <div><dt>Year</dt><dd id="info-year" data-testid="info-year"></dd></div>
+                  <div><dt>Category</dt><dd id="info-category" data-testid="info-category"></dd></div>
+                  <div><dt>Dimensions</dt><dd id="info-dimensions" data-testid="info-dimensions"></dd></div>
+                  <div><dt>Medium</dt><dd id="info-medium" data-testid="info-medium"></dd></div>
+                  <div><dt>Price</dt><dd id="info-price" data-testid="info-price"></dd></div>
+               </dl>
+
+               <h3 class="info-section-title">About this work</h3>
+               <p id="info-description" class="info-description" data-testid="info-description"></p>
+
+               <button id="info-view-btn" class="info-view-btn" data-testid="info-view-btn">
+                  <i class="fas fa-expand"></i> View fullscreen
+               </button>
+            </div>
+         </div>
+      </div>
+
       <footer>
          <p></p>
       </footer>
