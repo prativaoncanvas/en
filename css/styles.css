@@ -837,9 +837,9 @@ body.lock-scroll {
 }
 
 .info-enquire-btn {
-        background: #ffd166;
-        color: #141a28;
-        border: 1px solid #ffd166;
+        background: #25D366;
+        color: #ffffff;
+        border: 1px solid #25D366;
         padding: 9px 18px;
         border-radius: 999px;
         cursor: pointer;
@@ -849,14 +849,16 @@ body.lock-scroll {
         align-items: center;
         gap: 8px;
         transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: 0 6px 16px rgba(255, 209, 102, 0.25);
+        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.30);
 }
 
+.info-enquire-btn i { font-size: 1.05rem; }
+
 .info-enquire-btn:hover {
-        background: #fff;
-        border-color: #fff;
+        background: #1ebe5b;
+        border-color: #1ebe5b;
         transform: translateY(-1px);
-        box-shadow: 0 8px 22px rgba(255, 209, 102, 0.35);
+        box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
 }
 
 /* Responsive — collapse to single column */

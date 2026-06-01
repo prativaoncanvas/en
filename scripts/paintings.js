@@ -24,9 +24,10 @@
 const SHOW_PRICE = false;
 window.SHOW_PRICE = SHOW_PRICE;
 
-// Contact e-mail used by the "Enquire" button on each painting.
-const ENQUIRE_EMAIL = "prativadebsharma17@gmail.com";
-window.ENQUIRE_EMAIL = ENQUIRE_EMAIL;
+// Contact WhatsApp number used by the "Enquire on WhatsApp" button on
+// each painting. wa.me expects the country code without the leading "+".
+const ENQUIRE_WHATSAPP = "918637541039";
+window.ENQUIRE_WHATSAPP = ENQUIRE_WHATSAPP;
 
 const paintings = [
     // ───── art-* series · Standard A3 works ─────
