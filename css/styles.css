@@ -894,23 +894,38 @@ body.lock-scroll {
         .lb-footer { padding: 12px 14px; }
 
         /* === Make info modal fully scrollable on mobile === */
+        /* Use a normal block scroll container with a fully-opaque dark
+           background so the page underneath never bleeds through, even
+           when the user rubber-band-scrolls past the content. */
         .info-modal {
                 padding: 0;
-                align-items: stretch;
+                background: #0c0f18;
                 -webkit-overflow-scrolling: touch;
                 overscroll-behavior: contain;
         }
+        .info-modal.is-open {
+                display: block;
+        }
         .info-card {
+                border: none;
                 border-radius: 0;
                 margin: 0;
+                width: 100%;
+                max-width: none;
                 min-height: 100vh;
                 box-shadow: none;
                 display: block;
                 overflow: visible;
+                background: #0c0f18;
         }
         .info-media {
                 padding: 56px 14px 10px;
                 display: block;
+                background: #0c0f18;
+        }
+        .info-body {
+                padding: 18px 16px 90px;
+                background: rgba(20, 26, 40, 0.95);
         }
         .info-hero-img {
                 width: 100%;
@@ -919,9 +934,6 @@ body.lock-scroll {
                 min-height: 260px;
                 object-fit: contain;
                 display: block;
-        }
-        .info-body {
-                padding: 18px 16px 90px;
         }
         .info-grid { grid-template-columns: 1fr; gap: 10px; }
         .info-actions { width: 100%; }
@@ -1262,4 +1274,3 @@ body.lock-scroll {
         .playlist-item { grid-template-columns: 100px 1fr; }
         .playlist-thumb { width: 100px; height: 58px; }
 }
-
