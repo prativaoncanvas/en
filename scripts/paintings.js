@@ -14,6 +14,20 @@
 // Look for the marker  // PLACEHOLDER  next to each painting.
 // ============================================================
 
+// ------------------------------------------------------------
+// SITE CONFIG
+// ------------------------------------------------------------
+// Toggle this flag to show / hide painting prices everywhere
+// (info modal + Enquire mail template). Flip to `true` when
+// you are ready to publish prices. Default: hidden.
+// ------------------------------------------------------------
+const SHOW_PRICE = false;
+window.SHOW_PRICE = SHOW_PRICE;
+
+// Contact e-mail used by the "Enquire" button on each painting.
+const ENQUIRE_EMAIL = "prativadebsharma17@gmail.com";
+window.ENQUIRE_EMAIL = ENQUIRE_EMAIL;
+
 const paintings = [
     // ───── art-* series · Standard A3 works ─────
     { fileName: "art-41.jpg", tags: ["pencil"],     title: "Lord Ganesha — Charcoal Study",            year: 2022 }, // PLACEHOLDER
