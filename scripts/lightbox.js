@@ -181,41 +181,34 @@
             show($("lightbox"));
         });
 
-        // Enquire — open user's mail client with a pre-filled template
+        // Enquire — open WhatsApp with a pre-filled message
         $("info-enquire-btn").addEventListener("click", () => {
             const p = window.PAINTINGS[currentIndex];
-            const email = window.ENQUIRE_EMAIL || "prativadebsharma17@gmail.com";
-            const subject = `Enquiry: ${p.title}`;
+            const phone = window.ENQUIRE_WHATSAPP || "918637541039";
             const lines = [
-                "Hello Prativa,",
+                `Hello Prativa, I would like to enquire about your painting "${p.title}".`,
                 "",
-                "I would like to enquire about the following painting:",
-                "",
-                `• Title       : ${p.title}`,
-                `• Reference ID: ${p.id}`,
-                `• Year        : ${p.year}`,
-                `• Category    : ${p.category}`,
-                `• Medium      : ${p.medium}`,
-                `• Dimensions  : ${p.dimensions}`
+                "Painting details:",
+                `• Reference ID : ${p.id}`,
+                `• Year         : ${p.year}`,
+                `• Category     : ${p.category}`,
+                `• Medium       : ${p.medium}`,
+                `• Dimensions   : ${p.dimensions}`
             ];
-            if (window.SHOW_PRICE) lines.push(`• Listed price: ${p.price}`);
+            if (window.SHOW_PRICE) lines.push(`• Listed price : ${p.price}`);
             lines.push(
                 "",
                 "Could you please share availability, shipping options and next steps?",
                 "",
                 "My details:",
-                "  Name    : ",
-                "  Phone   : ",
-                "  City    : ",
-                "  Message : ",
+                "  Name : ",
+                "  City : ",
                 "",
                 "Thank you!"
             );
-            const body = lines.join("\n");
-            const href = "mailto:" + encodeURIComponent(email) +
-                         "?subject=" + encodeURIComponent(subject) +
-                         "&body=" + encodeURIComponent(body);
-            window.location.href = href;
+            const text = lines.join("\n");
+            const href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+            window.open(href, "_blank", "noopener");
         });
 
         // Click outside the inner card closes

@@ -26,8 +26,8 @@ This iteration introduced five UX/feature changes requested by the artist:
 - `scripts/art-filter.js` rewritten to single-select tag behaviour
   (re-click clears back to "all"; `data-testid` selectors preserved).
 - `scripts/paintings.js` exposes two new globals at the top:
-  - `SHOW_PRICE` (default `false`) — show/hide price row in modal & e-mail body
-  - `ENQUIRE_EMAIL` (default `prativadebsharma17@gmail.com`)
+  - `SHOW_PRICE` (default `false`) — show/hide price row in modal & WhatsApp message
+  - `ENQUIRE_WHATSAPP` (default `918637541039`) — WhatsApp number (country code, no `+`)
 - `paintings.html`
   - Filter hint copy updated for single-select
   - New `info-actions` row containing existing **View fullscreen** plus new
@@ -35,9 +35,10 @@ This iteration introduced five UX/feature changes requested by the artist:
   - `info-price-row` wrapped with an id so it can be hidden by the flag
 - `scripts/lightbox.js`
   - `renderInfoView()` now toggles `#info-price-row` based on `SHOW_PRICE`
-  - `info-enquire-btn` click builds a `mailto:` URL with subject
-    `Enquiry: <title>` and a structured body (title, ID, year, category, medium,
-    dimensions, optional price, then asks user to fill name/phone/city/message)
+  - `info-enquire-btn` click opens `https://wa.me/<phone>?text=…` in a new tab.
+    The pre-filled text contains painting title in the opening line, then a
+    bulleted block (Reference ID, Year, Category, Medium, Dimensions and
+    Price when `SHOW_PRICE=true`) and blank `Name` / `City` lines.
 - `css/styles.css`
   - New styles for `.info-actions` + `.info-enquire-btn` (yellow CTA)
   - Mobile (≤560px) info modal: full-bleed card, scrollable body
