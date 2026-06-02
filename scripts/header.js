@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
          logoAlt: "Prativa on Canvas Logo",
          brandLine1: "Prativa",
          brandLine2: "on Canvas",
-         enLink: "index.html",
-         bnLink: "/bn/index.html"
+         enLink: "#",
+         bnLink: "/bn/"
       },
       bn: {
          brandSub: "জলরঙ · অ্যাক্রিলিক · পেন্সিল",
@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
          logoAlt: "প্রতিভার ক্যানভাস লোগো",
          brandLine1: "প্রতিভার",
          brandLine2: "ক্যানভাস",
-         enLink: "/en/index.html",
-         bnLink: "index.html"
+         enLink: "/",
+         bnLink: "#"
       }
    };
 

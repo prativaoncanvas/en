@@ -8,43 +8,56 @@
 - **Visual vibe:** elegant minimal gallery × bold artistic / painterly
 - **Logo treatment:** elegant calligraphy script + modern serif
 - **SEO targeting keywords:** Prativa Debsharma, watercolor artist, India, Bengali, USA, Jacksonville
+- **Production domain:** `https://prativaoncanvas.com`
+- **About section:** auto-drafted bio + monogram placeholder portrait
+- **Bilingual:** full 1-to-1 Bengali mirror at `/bn/`
 
 ## Architecture
 - Pure static site at `/app` (HTML / CSS / vanilla JS) — no MongoDB/backend logic needed
 - Served on port 3000 by a tiny Express static server in `/app/frontend/server.js`
 - Stub FastAPI in `/app/backend/server.py` exists only so supervisor stays green; no API used by the site
-- Existing JS modules untouched: paintings, lightbox, art-filter, videos, contact form (Google Form POST)
+- Existing JS modules untouched (only `paintings.js::getImageBase` adjusted to use `/arts/` for bn pages)
+- Bengali mirror under `/app/bn/` shares the same `/css`, `/scripts`, `/arts`, `/favicon` via absolute paths
 
 ## What's been implemented (2026-01)
+### Iteration 1 — redesign + SEO
 - **Refreshed visual identity**: warm paper-ivory palette (#f7f1e3), terracotta accent (#b65a3c), deep ink text — replaces the old purple→blue gradient
-- **Artistic brand mark** for "Prativa on Canvas": gradient-ink Pinyon Script calligraphy "Prativa" + uppercase serif "on Canvas" + circular monogram disk in terracotta→gold
-- **Editorial typography**: Cormorant Garamond (headings, italic accents), Pinyon Script (signature), Manrope (body/UI)
-- **New home hero**: signature-style name, italic subtitle "a Bengali watercolor artist · Jacksonville · India", twin CTA (View gallery / Get in touch), tilted framed featured painting with handwritten tag
-- **Quotes section** redesigned as left-bordered cards with staggered slide-in animations
-- **Paintings gallery**: clean white cards on cream, CSS-grid auto-fill, hover lift/zoom, accent-pill filter tags
-- **Videos page**: cream-on-white player + playlist with terracotta now-playing badge
-- **Contact page**: rounded surface card, accent focus states, gradient-pill social icons
-- **Dark gallery-style lightbox + info modal** preserved (best UX for image viewing), recoloured to the new accent
-- **Mobile responsive**: hamburger menu, grid breakpoints at 960/820/720/560
-- **SEO**: per-page `<title>`, meta description, keywords, author, robots, canonical; Open Graph + Twitter Card tags; JSON-LD `Person` schema on home; `robots.txt` + `sitemap.xml`
-- All existing `data-testid` hooks preserved + new test IDs added for header/nav/hero/contact form
+- **Artistic brand mark** for "Prativa on Canvas": gradient-ink Pinyon Script "Prativa" + uppercase serif "on Canvas" + circular monogram disk
+- **Editorial typography**: Cormorant Garamond (headings), Pinyon Script (signature), Manrope (body)
+- New home hero with framed featured painting + twin CTA buttons
+- Quotes redesigned as left-bordered cards with staggered animations
+- Paintings grid with white cards, hover-zoom, accent-pill filter tags
+- Videos page: cream player + playlist with terracotta now-playing badge
+- Contact: rounded surface card, accent focus states, gradient-pill social icons
+- Dark gallery-style lightbox + info modal preserved and recoloured
+- Mobile responsive: hamburger menu, breakpoints at 960/820/720/560
+- **SEO**: per-page title/description/keywords/author/robots/canonical; OpenGraph + Twitter Card; JSON-LD `Person` schema on home; `robots.txt` + `sitemap.xml`
+
+### Iteration 2 — About + Bengali mirror
+- **About section** on home: 2-col layout with an elegant "Pd" monogram placeholder portrait (warm gradient + tilted dual frame), bio in 2 paragraphs, 4-fact quick reference (Born/Based/Mediums/Featured in), and "— Prativa" script signature
+- **Full Bengali mirror** at `/app/bn/` covering home, paintings, videos, contact
+  - Bengali fonts loaded: Noto Serif Bengali (headings), Hind Siliguri (body), Tiro Bangla (italic flourish)
+  - `/app/css/bn.css` overrides typography tokens when `html[lang="bn"]`
+  - All translations done (hero copy, About bio, navigation, form labels, footer quote)
+  - Bengali contact form posts to the same Google Form (existing entry IDs)
+  - Bengali Open Graph/Twitter tags + per-page canonical + `hreflang` alternates between en ↔ bn
+- **`hreflang` cross-linking** added to all 4 English pages too (`hreflang="en" / bn / x-default`)
+- **Sitemap** updated with 8 URLs and xhtml:link alternates
+- Language toggle in header now flips between `/` and `/bn/` correctly
 
 ## Files added / changed
-- `/app/css/styles.css` — full rewrite (gallery aesthetic)
-- `/app/scripts/header.js` — artistic brand markup + mobile hamburger + active-link highlight
-- `/app/index.html` — new hero, SEO block, JSON-LD
-- `/app/paintings.html` — SEO + minor structural tidy
-- `/app/videos.html` — SEO
-- `/app/contact.html` — SEO + cleaner form labels
-- `/app/connect.html` — SEO (no-index thank-you page)
-- `/app/robots.txt`, `/app/sitemap.xml` — new
-- `/app/frontend/{package.json,server.js}` — static server for port 3000
-- `/app/backend/{server.py,requirements.txt}` — minimal stub so supervisor stays healthy
+- `/app/css/styles.css` — full rewrite + new `.about` section styles
+- `/app/css/bn.css` — Bengali typography overrides (new)
+- `/app/scripts/header.js` — artistic brand markup + hamburger + active link + en/bn toggle URLs
+- `/app/scripts/paintings.js` — getImageBase() uses `/arts/` for bn
+- `/app/index.html`, `/app/paintings.html`, `/app/videos.html`, `/app/contact.html`, `/app/connect.html` — SEO + hreflang
+- `/app/bn/index.html`, `/app/bn/paintings.html`, `/app/bn/videos.html`, `/app/bn/contact.html` — new Bengali mirror
+- `/app/robots.txt`, `/app/sitemap.xml` — new with xhtml:link alternates
+- `/app/frontend/{package.json, server.js}`, `/app/backend/{server.py, requirements.txt}` — supervisor scaffolding
 
 ## Backlog / next ideas
-- P1: Replace `https://prativaoncanvas.com` placeholder in canonical/OG tags with the final production domain once chosen
-- P1: Add an "About" section with artist bio + photo (currently only quotes section)
-- P2: Migrate Bengali `/bn/` mirror pages with the new design (header.js already detects `lang="bn"`)
+- P1: When the user has a real photo of Prativa, drop it into `/app/icons/prativa.jpg` and swap the `.about-portrait` placeholder for an `<img>` element
+- P1: Add `VisualArtwork` JSON-LD per painting for richer Google image results
 - P2: Optimise images (WebP + responsive `srcset`) for faster gallery loads
-- P2: Wire a real email backend (Resend/SendGrid) instead of relying on the Google Form
-- P2: Add structured `VisualArtwork` JSON-LD on each painting card for richer Google image results
+- P2: Wire a real email backend (Resend/SendGrid) instead of the Google Form
+- P2: Add an "About" mid-section on the Bengali home with the bilingual signature
