@@ -1644,45 +1644,50 @@ body.lock-scroll { overflow: hidden; }
 
 @media (max-width: 720px) {
    .nav-wrap {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+         "brand lang"
+         "nav   nav";
       padding: 10px 16px;
-      gap: 8px;
-      justify-items: center;
-      text-align: center;
+      gap: 8px 12px;
+      align-items: center;
+      justify-items: stretch;
+      text-align: left;
    }
-   .brand { gap: 10px; }
+   .brand { grid-area: brand; justify-self: start; gap: 10px; }
    .brand-mark { width: 38px; height: 38px; font-size: 1.3rem; }
    .brand-script { font-size: 1.5rem; }
    .brand-sub { font-size: 0.6rem; letter-spacing: 0.26em; }
 
+   .language-toggle {
+      grid-area: lang;
+      justify-self: end;
+      justify-content: flex-end;
+      font-size: 0.72rem;
+      gap: 6px;
+   }
+   .language-toggle a { padding: 5px 10px; }
+
    nav {
-      grid-column: 1 / -1;
+      grid-area: nav;
       width: 100%;
    }
    nav ul {
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2px 4px;
-      padding: 0;
+      gap: 2px 8px;
+      padding: 4px 0 0;
    }
    nav ul li { display: inline-block; }
    nav ul li a {
-      padding: 7px 12px;
-      font-size: 0.78rem;
-      letter-spacing: 0.05em;
+      padding: 9px 14px;
+      font-size: 0.92rem;
+      letter-spacing: 0.06em;
    }
    nav ul li a::after { bottom: 2px; }
 
-   .language-toggle {
-      grid-column: 1 / -1;
-      justify-content: center;
-      font-size: 0.72rem;
-      gap: 6px;
-   }
-   .language-toggle a { padding: 4px 10px; }
-
    .nav-toggle { display: none; }
-   main { padding-top: 150px; }
+   main { padding-top: 132px; }
    section { padding: 0 18px; }
 }
 
@@ -1699,9 +1704,10 @@ body.lock-scroll { overflow: hidden; }
    .quote img { width: 48px; height: 48px; }
    .quote p { font-size: 1rem; }
 
-   nav ul li a { padding: 6px 9px; font-size: 0.72rem; }
+   nav ul li a { padding: 8px 11px; font-size: 0.82rem; }
    .brand-script { font-size: 1.35rem; }
-   main { padding-top: 140px; }
+   .brand-sub { font-size: 0.56rem; }
+   main { padding-top: 124px; }
 
    .lb-stage { padding: 70px 14px 14px; }
    .lb-nav { width: 40px; height: 40px; }
