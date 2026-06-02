@@ -15,15 +15,11 @@
 // ============================================================
 
 window.HERO_FEATURED = [
-   { file: "art-1.jpg",  title: "— Prativa" },
+   { file: "art-1.jpg",  title: "Glow of the Goddess" },
    { file: "art-46.jpg", title: "Devi Durga" },
-   { file: "art-48.jpg", title: "The Artist & Her Shiva" },
-   { file: "art-49.jpg", title: "Maa Kali" },
-   { file: "art-52.jpg", title: "Lakshmi · Lotus & Light" },
-   { file: "art-55.jpg", title: "Shiva Tandava" },
-   { file: "art-56.jpg", title: "Banaras Ghat at Dawn" },
-   { file: "wide-3.jpg", title: "Krishna at Sunset" },
-   { file: "wide-4.jpg", title: "Banaras Panorama" }
+   { file: "art-41.jpg", title: "Siddhidata Ganesh" },
+   { file: "art-43.jpg", title: "Lord Hanuman" },
+   { file: "art-11.jpg", title: "Krishna Kanhaiya" }
 ];
 
 (function initHeroFeatured() {

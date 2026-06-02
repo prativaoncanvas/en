@@ -108,6 +108,8 @@ header {
    width: 50px;
    height: 50px;
    border-radius: 50%;
+   overflow: hidden;
+   padding: 0;
    background: linear-gradient(135deg, var(--accent), var(--gold));
    color: #fff;
    display: inline-flex;
@@ -116,9 +118,15 @@ header {
    font-family: var(--ff-script);
    font-size: 1.85rem;
    line-height: 1;
-   padding-bottom: 6px;
    box-shadow: var(--shadow-md), inset 0 0 0 2px rgba(255,255,255,0.25);
    flex-shrink: 0;
+}
+
+.brand-mark img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
 }
 
 .brand-name { display: flex; flex-direction: column; line-height: 1; }
@@ -275,16 +283,14 @@ footer p {
 }
 
 footer p::before {
-   content: "“Art washes away from the soul the dust of everyday life.” — ";
-   color: rgba(255,255,255,0.55);
-   font-style: italic;
+   content: "© 2026 Prativa on Canvas.";
 }
 
-footer p::after { content: "  ·  © 2025 Prativa on Canvas"; }
+footer p::after { content: " All rights reserved."; }
 
-html:lang(bn) footer p::after { content: "  ·  © ২০২৫ প্রতিভার ক্যানভাস"; }
+html:lang(bn) footer p::after { content: "সর্বস্বত্ব সংরক্ষিত"; }
 html:lang(bn) footer p::before {
-   content: "“শিল্প আত্মা থেকে দৈনন্দিন জীবনের ধুলো মুছে দেয়।” — ";
+   content: "© ২০২৬ প্রতিভার ক্যানভাস | ";
 }
 
 /* ============================================================
@@ -422,7 +428,6 @@ html:lang(bn) footer p::before {
    font-size: 1.1rem;
    letter-spacing: 0.02em;
    line-height: 1;
-   backdrop-filter: blur(6px);
 }
 
 /* Old intro fallback — kept for safety */
@@ -552,7 +557,7 @@ html:lang(bn) footer p::before {
 
 .about-signature {
    font-family: var(--ff-script);
-   font-size: 2rem;
+   font-size: 2.5rem;
    color: var(--accent);
    margin-top: 6px;
    line-height: 1;
@@ -658,7 +663,15 @@ html:lang(bn) footer p::before {
    padding: 0;
 }
 
-#paintings h1 { text-align: center; margin-bottom: 10px; }
+#paintings h2 { text-align: center; font-style: italic; font-family: var(--ff-serif); }
+#paintings h2::after {
+   content: "";
+   display: block;
+   width: 50px;
+   height: 2px;
+   background: var(--accent);
+   margin: 14px auto 30px;
+}
 
 .filter-hint {
    max-width: 720px;
@@ -896,8 +909,7 @@ html:lang(bn) footer p::before {
 
 /* Publications */
 #publications h2 {
-   text-align: center;
-   margin-bottom: 8px;
+   text-align: center; font-style: italic; font-family: var(--ff-serif);
 }
 #publications h2::after {
    content: "";
@@ -948,8 +960,8 @@ html:lang(bn) footer p::before {
    ============================================================ */
 
 #contact { padding: 0 24px; }
-#contact h1 { text-align: center; margin-bottom: 8px; }
-#contact h1::after {
+#contact h2 { text-align: center; font-style: italic; font-family: var(--ff-serif); }
+#contact h2::after {
    content: "";
    display: block;
    width: 50px;
@@ -1112,7 +1124,15 @@ html:lang(bn) footer p::before {
    Videos page
    ============================================================ */
 
-#videos h1 { text-align: left; margin: 0 0 22px; }
+#videos h2 { text-align: center; font-style: italic; font-family: var(--ff-serif); }
+#videos h2::after {
+   content: "";
+   display: block;
+   width: 50px;
+   height: 2px;
+   background: var(--accent);
+   margin: 14px auto 30px;
+}
 
 .video-player-wrap {
    display: grid;

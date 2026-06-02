@@ -36,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <header data-testid="site-header">
          <div class="nav-wrap">
             <a href="index.html" class="brand" data-testid="brand-link" aria-label="Prativa on Canvas — home">
-               <span class="brand-mark" aria-hidden="true">P</span>
+               <span class="brand-mark" aria-hidden="true">
+				  <img src="icons/logo.png" alt="Prativa on Canvas">
+			   </span>
                <span class="brand-name">
                   <span class="brand-script">${L.brandLine1}</span>
                   <span class="brand-sub">${L.brandLine2}</span>
