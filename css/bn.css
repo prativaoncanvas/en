@@ -42,11 +42,13 @@ html[lang="bn"] .brand-sub {
 /* Tags & UI chips should keep their Manrope-style face — Hind Siliguri handles
    both Latin and Bengali nicely so no override needed. */
 
-/* Bengali nav text is wider — give links a touch more breathing room */
+/* Bengali nav text — use Bengali serif at normal style (no italic) */
 html[lang="bn"] nav ul li a {
+   font-family: "Noto Serif Bengali", "Tiro Bangla", Georgia, serif;
+   font-style: normal;
    text-transform: none;
-   letter-spacing: 0.02em;
-   font-weight: 700;
+   letter-spacing: 0.01em;
+   font-weight: 600;
 }
 
 /* Required-asterisk colour stays. Form labels in Bengali don't need uppercase. */
