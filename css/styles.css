@@ -105,8 +105,8 @@ header {
 }
 
 .brand-mark {
-   width: 46px;
-   height: 46px;
+   width: 50px;
+   height: 50px;
    border-radius: 50%;
    background: linear-gradient(135deg, var(--accent), var(--gold));
    color: #fff;
@@ -114,7 +114,7 @@ header {
    align-items: center;
    justify-content: center;
    font-family: var(--ff-script);
-   font-size: 1.65rem;
+   font-size: 1.85rem;
    line-height: 1;
    padding-bottom: 6px;
    box-shadow: var(--shadow-md), inset 0 0 0 2px rgba(255,255,255,0.25);
@@ -125,10 +125,10 @@ header {
 
 .brand-script {
    font-family: var(--ff-script);
-   font-size: 1.85rem;
+   font-size: 2.25rem;
    color: var(--ink);
    line-height: 1;
-   margin-bottom: 2px;
+   margin-bottom: 3px;
    background: linear-gradient(180deg, var(--ink) 60%, var(--accent));
    -webkit-background-clip: text;
    background-clip: text;
@@ -137,7 +137,7 @@ header {
 
 .brand-sub {
    font-family: var(--ff-body);
-   font-size: 0.7rem;
+   font-size: 0.74rem;
    letter-spacing: 0.32em;
    text-transform: uppercase;
    color: var(--muted);
@@ -158,11 +158,13 @@ nav ul li a {
    position: relative;
    color: var(--ink);
    text-decoration: none;
-   font-weight: 600;
-   font-size: 0.9rem;
-   letter-spacing: 0.06em;
-   text-transform: uppercase;
-   padding: 10px 14px;
+   font-family: var(--ff-serif);
+   font-style: italic;
+   font-weight: 500;
+   font-size: 1.15rem;
+   letter-spacing: 0.01em;
+   text-transform: none;
+   padding: 10px 16px;
    border-radius: 999px;
    transition: color .2s ease, background .2s ease;
 }
@@ -188,8 +190,8 @@ nav ul li a:hover::after { transform: scaleX(1); }
 .language-toggle {
    display: inline-flex;
    align-items: center;
-   gap: 8px;
-   font-size: 0.78rem;
+   gap: 6px;
+   font-size: 0.66rem;
    font-weight: 600;
    letter-spacing: 0.08em;
    color: var(--muted);
@@ -198,7 +200,7 @@ nav ul li a:hover::after { transform: scaleX(1); }
 .language-toggle a {
    color: var(--muted);
    text-decoration: none;
-   padding: 6px 10px;
+   padding: 4px 8px;
    border-radius: 999px;
    border: 1px solid var(--line);
    transition: all .2s ease;
@@ -1655,18 +1657,18 @@ body.lock-scroll { overflow: hidden; }
       text-align: left;
    }
    .brand { grid-area: brand; justify-self: start; gap: 10px; }
-   .brand-mark { width: 38px; height: 38px; font-size: 1.3rem; }
-   .brand-script { font-size: 1.5rem; }
-   .brand-sub { font-size: 0.6rem; letter-spacing: 0.26em; }
+   .brand-mark { width: 44px; height: 44px; font-size: 1.55rem; }
+   .brand-script { font-size: 1.95rem; }
+   .brand-sub { font-size: 0.66rem; letter-spacing: 0.26em; }
 
    .language-toggle {
       grid-area: lang;
       justify-self: end;
       justify-content: flex-end;
-      font-size: 0.72rem;
-      gap: 6px;
+      font-size: 0.6rem;
+      gap: 5px;
    }
-   .language-toggle a { padding: 5px 10px; }
+   .language-toggle a { padding: 3px 8px; }
 
    nav {
       grid-area: nav;
@@ -1680,9 +1682,8 @@ body.lock-scroll { overflow: hidden; }
    }
    nav ul li { display: inline-block; }
    nav ul li a {
-      padding: 9px 14px;
-      font-size: 0.92rem;
-      letter-spacing: 0.06em;
+      padding: 8px 14px;
+      font-size: 1.05rem;
    }
    nav ul li a::after { bottom: 2px; }
 
@@ -1704,9 +1705,12 @@ body.lock-scroll { overflow: hidden; }
    .quote img { width: 48px; height: 48px; }
    .quote p { font-size: 1rem; }
 
-   nav ul li a { padding: 8px 11px; font-size: 0.82rem; }
-   .brand-script { font-size: 1.35rem; }
-   .brand-sub { font-size: 0.56rem; }
+   nav ul li a { padding: 7px 11px; font-size: 0.95rem; }
+   .brand-mark { width: 40px; height: 40px; font-size: 1.4rem; }
+   .brand-script { font-size: 1.75rem; }
+   .brand-sub { font-size: 0.6rem; }
+   .language-toggle { font-size: 0.56rem; }
+   .language-toggle a { padding: 3px 7px; }
    main { padding-top: 124px; }
 
    .lb-stage { padding: 70px 14px 14px; }
