@@ -282,16 +282,8 @@ footer p {
    font-size: 0.95rem;
 }
 
-footer p::before {
-   content: "© 2026 Prativa on Canvas.";
-}
+footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
 
-footer p::after { content: " All rights reserved."; }
-
-html:lang(bn) footer p::after { content: "সর্বস্বত্ব সংরক্ষিত"; }
-html:lang(bn) footer p::before {
-   content: "© ২০২৬ প্রতিভার ক্যানভাস | ";
-}
 
 /* ============================================================
    Home Page — Hero + Quotes

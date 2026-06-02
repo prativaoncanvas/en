@@ -14,19 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
          brandLine2: "on Canvas",
          enLink: "#",
          bnLink: "/bn/"
-      },
-      bn: {
-         brandSub: "জলরঙ · অ্যাক্রিলিক · পেন্সিল",
-         home: "শুরু",
-         paintings: "চিত্রকর্ম",
-         videos: "ভিডিও",
-         contact: "যোগাযোগ",
-         menu: "মেনু",
-         logoAlt: "প্রতিভার ক্যানভাস লোগো",
-         brandLine1: "প্রতিভার",
-         brandLine2: "ক্যানভাস",
-         enLink: "/",
-         bnLink: "#"
       }
    };
 
@@ -56,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="language-toggle" data-testid="language-toggle">
                <a href="${L.enLink}" id="toggleEN" aria-label="English">EN</a>
-               <a href="${L.bnLink}" id="toggleBN" aria-label="Bangla">বাংলা</a>
             </div>
          </div>
       </header>
