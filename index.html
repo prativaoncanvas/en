@@ -1,51 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Prativa on Canvas</title>
-      <link rel="stylesheet" href="css/styles.css">
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#f7f1e3" />
+
+      <title>Prativa on Canvas — Prativa Debsharma | Bengali Watercolor Artist · Jacksonville, FL · India</title>
+      <meta name="description" content="Prativa on Canvas — the official portfolio of Prativa Debsharma, a Bengali watercolor artist based in Jacksonville, Florida (USA) with roots in India. Explore an evolving gallery of watercolors, acrylics, pastels and pencil works, behind-the-scenes videos and published illustrations." />
+      <meta name="keywords" content="Prativa Debsharma, Prativa on Canvas, watercolor artist, Bengali artist, Indian artist, Jacksonville Florida artist, USA artist, acrylic paintings, pastel art, pencil sketches, contemporary watercolor, প্রতিভার ক্যানভাস, প্রতিভা দেবশর্মা" />
+      <meta name="author" content="Prativa Debsharma" />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://prativaoncanvas.com/" />
+
+      <!-- Open Graph -->
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Prativa on Canvas" />
+      <meta property="og:title" content="Prativa on Canvas — Bengali Watercolor Artist" />
+      <meta property="og:description" content="Portfolio of Prativa Debsharma — Bengali watercolor artist based in Jacksonville, FL. Watercolors, acrylics, pastels & pencil works." />
+      <meta property="og:image" content="arts/art-1.jpg" />
+      <meta property="og:url" content="https://prativaoncanvas.com/" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale:alternate" content="bn_IN" />
+
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Prativa on Canvas — Bengali Watercolor Artist" />
+      <meta name="twitter:description" content="Watercolors, acrylics & pencil works by Prativa Debsharma · Jacksonville, FL · India." />
+      <meta name="twitter:image" content="arts/art-1.jpg" />
+
+      <!-- Structured data -->
+      <script type="application/ld+json">
+      {
+         "@context": "https://schema.org",
+         "@type": "Person",
+         "name": "Prativa Debsharma",
+         "alternateName": "প্রতিভা দেবশর্মা",
+         "jobTitle": "Watercolor Artist",
+         "url": "https://prativaoncanvas.com/",
+         "image": "arts/art-1.jpg",
+         "sameAs": [
+            "https://www.youtube.com/@PrativaOnCanvas",
+            "https://www.facebook.com/profile.php?id=100065688631460",
+            "https://www.instagram.com/prativaoncanvas/"
+         ],
+         "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jacksonville",
+            "addressRegion": "FL",
+            "addressCountry": "USA"
+         },
+         "nationality": "Indian",
+         "knowsLanguage": ["English", "Bengali"]
+      }
+      </script>
+
       <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
       <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
       <link rel="shortcut icon" href="favicon/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
       <link rel="manifest" href="favicon/site.webmanifest" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      <link rel="stylesheet" href="css/styles.css" />
+
       <script src="scripts/header.js"></script>
       <script src="scripts/footer.js"></script>
    </head>
    <body>
       <div id="header-container"></div>
+
       <main>
-         <section id="home">
-            <div class="intro">
-               <h1>Hearty Welcome</h1>
-               <p>Art is the expression of human creativity, skill, and imagination. It transcends boundaries, evokes emotions, and brings to life the essence of humanity. Through painting, we capture the beauty of the world and the depths of our soul. Each brushstroke is a story, each color a melody, and each painting a journey into the heart of the artist.</p>
+         <section id="home" data-testid="home-section">
+            <div class="hero">
+               <div class="hero-text">
+                  <span class="eyebrow">Hearty Welcome</span>
+                  <h1 class="hero-signature">Prativa</h1>
+                  <p class="hero-title">a Bengali watercolor artist · Jacksonville · India</p>
+                  <p class="lede">
+                     Art is the expression of human creativity, skill and imagination. It transcends boundaries,
+                     evokes emotion and brings to life the essence of humanity. Through painting, I capture the
+                     beauty of the world and the quiet depths of the soul — each brushstroke a story,
+                     each colour a melody, each canvas a small journey.
+                  </p>
+                  <a href="paintings.html" class="hero-cta" data-testid="cta-paintings">
+                     <i class="fas fa-palette"></i> View the gallery
+                  </a>
+                  <a href="contact.html" class="hero-cta" data-testid="cta-contact">
+                     Get in touch
+                  </a>
+               </div>
+
+               <div class="hero-art" data-testid="hero-art">
+                  <img src="arts/art-1.jpg" alt="Featured painting by Prativa Debsharma" loading="eager" />
+                  <span class="hero-tag">— Prativa</span>
+               </div>
             </div>
-            <div class="quotes">
+
+            <div class="quotes" data-testid="quotes">
                <h3>Inspiration from Famous Artists</h3>
                <div class="quote" id="quote1">
-                  <img src="icons/vinci.jpg" alt="Leonardo da Vinci">
-                  <p><em>"Painting is poetry that is seen rather than felt, and poetry is painting that is felt rather than seen."</em><br>- Leonardo da Vinci</p>
+                  <img src="icons/vinci.jpg" alt="Leonardo da Vinci" />
+                  <p><em>“Painting is poetry that is seen rather than felt, and poetry is painting that is felt rather than seen.”</em><br />— Leonardo da Vinci</p>
                </div>
                <div class="quote" id="quote2">
-                  <img src="icons/picasso.jpg" alt="Pablo Picasso">
-                  <p><em>"Art washes away from the soul the dust of everyday life."</em><br>- Pablo Picasso</p>
+                  <img src="icons/picasso.jpg" alt="Pablo Picasso" />
+                  <p><em>“Art washes away from the soul the dust of everyday life.”</em><br />— Pablo Picasso</p>
                </div>
                <div class="quote" id="quote3">
-                  <img src="icons/frida.jpg" alt="Frida Kahlo">
-                  <p><em>"I never paint dreams or nightmares. I paint my own reality."</em><br> - Frida Kahlo</p>
+                  <img src="icons/frida.jpg" alt="Frida Kahlo" />
+                  <p><em>“I never paint dreams or nightmares. I paint my own reality.”</em><br />— Frida Kahlo</p>
                </div>
                <div class="quote" id="quote4">
-                  <img src="icons/matisse.jpg" alt="Henri Matisse">
-                  <p><em>"Creativity takes courage."</em><br> - Henri Matisse</p>
+                  <img src="icons/matisse.jpg" alt="Henri Matisse" />
+                  <p><em>“Creativity takes courage.”</em><br />— Henri Matisse</p>
                </div>
                <div class="quote" id="quote5">
-                  <img src="icons/bacon.jpg" alt="Francis Bacon">
-                  <p><em>"The job of the artist is always to deepen the mystery."</em><br>- Francis Bacon</p>
+                  <img src="icons/bacon.jpg" alt="Francis Bacon" />
+                  <p><em>“The job of the artist is always to deepen the mystery.”</em><br />— Francis Bacon</p>
                </div>
             </div>
          </section>
       </main>
+
       <footer>
          <p></p>
       </footer>
