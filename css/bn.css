@@ -48,7 +48,7 @@ html[lang="bn"] nav ul li a {
    font-style: normal;
    text-transform: none;
    letter-spacing: 0.01em;
-   font-weight: 600;
+   font-weight: 700;
 }
 
 /* Required-asterisk colour stays. Form labels in Bengali don't need uppercase. */

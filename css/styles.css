@@ -160,8 +160,8 @@ nav ul li a {
    text-decoration: none;
    font-family: var(--ff-serif);
    font-style: italic;
-   font-weight: 500;
-   font-size: 1.15rem;
+   font-weight: 700;
+   font-size: 1.32rem;
    letter-spacing: 0.01em;
    text-transform: none;
    padding: 10px 16px;
@@ -1683,7 +1683,7 @@ body.lock-scroll { overflow: hidden; }
    nav ul li { display: inline-block; }
    nav ul li a {
       padding: 8px 14px;
-      font-size: 1.05rem;
+      font-size: 1.18rem;
    }
    nav ul li a::after { bottom: 2px; }
 
@@ -1705,7 +1705,7 @@ body.lock-scroll { overflow: hidden; }
    .quote img { width: 48px; height: 48px; }
    .quote p { font-size: 1rem; }
 
-   nav ul li a { padding: 7px 11px; font-size: 0.95rem; }
+   nav ul li a { padding: 7px 11px; font-size: 1.05rem; }
    .brand-mark { width: 40px; height: 40px; font-size: 1.4rem; }
    .brand-script { font-size: 1.75rem; }
    .brand-sub { font-size: 0.6rem; }
