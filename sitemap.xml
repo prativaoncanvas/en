@@ -1,23 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
    <url>
       <loc>https://prativaoncanvas.com/</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://prativaoncanvas.com/" />
+      <xhtml:link rel="alternate" hreflang="bn" href="https://prativaoncanvas.com/bn/" />
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://prativaoncanvas.com/paintings.html</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://prativaoncanvas.com/paintings.html" />
+      <xhtml:link rel="alternate" hreflang="bn" href="https://prativaoncanvas.com/bn/paintings.html" />
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
       <loc>https://prativaoncanvas.com/videos.html</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://prativaoncanvas.com/videos.html" />
+      <xhtml:link rel="alternate" hreflang="bn" href="https://prativaoncanvas.com/bn/videos.html" />
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
       <loc>https://prativaoncanvas.com/contact.html</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://prativaoncanvas.com/contact.html" />
+      <xhtml:link rel="alternate" hreflang="bn" href="https://prativaoncanvas.com/bn/contact.html" />
       <changefreq>yearly</changefreq>
       <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://prativaoncanvas.com/bn/</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://prativaoncanvas.com/bn/paintings.html</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://prativaoncanvas.com/bn/videos.html</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://prativaoncanvas.com/bn/contact.html</loc>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
    </url>
 </urlset>

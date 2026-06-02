@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#f7f1e3" />
+
+      <title>ভিডিও — প্রতিভার ক্যানভাস | চিত্রকর্মের টিউটোরিয়াল ও স্টুডিও ভ্লগ</title>
+      <meta name="description" content="বাঙালি জলরঙ শিল্পী প্রতিভা দেবশর্মার আঁকার প্রদর্শন, প্রক্রিয়ার ভিডিও ও স্টুডিও ভ্লগ দেখুন।" />
+      <meta name="keywords" content="প্রতিভা দেবশর্মা ভিডিও, জলরঙ টিউটোরিয়াল, বাঙালি শিল্পী ইউটিউব, প্রতিভার ক্যানভাস ভিডিও" />
+      <meta name="author" content="প্রতিভা দেবশর্মা" />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://prativaoncanvas.com/bn/videos.html" />
+      <link rel="alternate" hreflang="en" href="https://prativaoncanvas.com/videos.html" />
+      <link rel="alternate" hreflang="bn" href="https://prativaoncanvas.com/bn/videos.html" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="প্রতিভার ক্যানভাস" />
+      <meta property="og:title" content="ভিডিও · প্রতিভার ক্যানভাস" />
+      <meta property="og:description" content="প্রতিভা দেবশর্মার চিত্রকর্মের প্রদর্শন ও স্টুডিও ভ্লগ।" />
+      <meta property="og:image" content="https://prativaoncanvas.com/arts/art-1.jpg" />
+      <meta property="og:url" content="https://prativaoncanvas.com/bn/videos.html" />
+
+      <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+      <link rel="manifest" href="/favicon/site.webmanifest" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=Pinyon+Script&family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      <link rel="stylesheet" href="/css/styles.css" />
+      <link rel="stylesheet" href="/css/bn.css" />
+
+      <script src="/scripts/header.js"></script>
+      <script src="/scripts/videos.js"></script>
+      <script src="/scripts/footer.js"></script>
+   </head>
+   <body>
+      <div id="header-container"></div>
+      <main>
+         <section id="videos">
+            <div class="content">
+               <h1>আমার ভিডিও</h1>
+
+               <div class="video-player-wrap" data-testid="video-player-wrap">
+                  <div class="video-main" data-testid="video-main">
+                     <div class="video-frame">
+                        <iframe
+                           id="main-video-iframe"
+                           data-testid="main-video-iframe"
+                           src=""
+                           title="YouTube ভিডিও প্লেয়ার"
+                           frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           referrerpolicy="strict-origin-when-cross-origin"
+                           allowfullscreen>
+                        </iframe>
+                     </div>
+                     <div class="video-now-playing">
+                        <span class="badge" data-testid="now-playing-badge">এখন চলছে</span>
+                        <h2 id="main-video-title" data-testid="main-video-title">লোড হচ্ছে…</h2>
+                        <p id="main-video-meta" data-testid="main-video-meta">প্রতিভার ক্যানভাস · YouTube</p>
+                     </div>
+                  </div>
+
+                  <aside class="video-playlist" data-testid="video-playlist">
+                     <div class="playlist-header">
+                        <h3>পরবর্তী</h3>
+                        <span class="count" id="playlist-count" data-testid="playlist-count"></span>
+                     </div>
+                     <div class="playlist-scroll" id="playlist-scroll" data-testid="playlist-scroll">
+                        <!-- playlist items injected by videos.js -->
+                     </div>
+                  </aside>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <p></p>
+      </footer>
+   </body>
+</html>

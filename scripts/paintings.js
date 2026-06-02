@@ -263,8 +263,10 @@ window.PAINTINGS = paintings.map(buildMeta);
 //                    IMAGE BASE PATH
 // ============================================================
 function getImageBase() {
+    // Bengali pages live at /bn/ and reach the shared image folder via an
+    // absolute path. English pages use a relative path from the site root.
     const lang = document.documentElement.lang;
-    return lang === "bn" ? "/en/arts/" : "arts/";
+    return lang === "bn" ? "/arts/" : "arts/";
 }
 window.getImageBase = getImageBase;
 
