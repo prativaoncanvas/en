@@ -56,10 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
                <a href="${L.enLink}" id="toggleEN" aria-label="English">EN</a>
                <a href="${L.bnLink}" id="toggleBN" aria-label="Bangla">বাংলা</a>
             </div>
-
-            <button class="nav-toggle" id="nav-toggle" data-testid="nav-toggle" aria-label="${L.menu}" aria-controls="primary-nav" aria-expanded="false">
-               <i class="fas fa-bars"></i>
-            </button>
          </div>
       </header>
    `;
@@ -67,19 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
    const headerContainer = document.getElementById("header-container");
    if (headerContainer) {
       headerContainer.innerHTML = headerHTML;
-
-      // Hamburger toggle
-      const toggleBtn = document.getElementById("nav-toggle");
-      const nav = document.getElementById("primary-nav");
-      if (toggleBtn && nav) {
-         toggleBtn.addEventListener("click", () => {
-            const open = nav.classList.toggle("is-open");
-            toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
-            toggleBtn.innerHTML = open
-               ? '<i class="fas fa-times"></i>'
-               : '<i class="fas fa-bars"></i>';
-         });
-      }
 
       // Highlight active nav link
       const here = (location.pathname.split("/").pop() || "index.html").toLowerCase();

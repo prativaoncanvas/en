@@ -805,6 +805,28 @@ html:lang(bn) footer p::before {
 
 .image-box:hover img { transform: scale(1.03); }
 
+/* Signature watermark drawn over each painting */
+.watermark {
+   position: absolute;
+   bottom: 12px;
+   left: 14px;
+   font-family: var(--ff-script);
+   font-size: 1.35rem;
+   line-height: 1;
+   color: rgba(255, 255, 255, 0.92);
+   text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.55),
+      0 0 12px rgba(0, 0, 0, 0.35);
+   pointer-events: none;
+   user-select: none;
+   z-index: 2;
+   letter-spacing: 0.01em;
+   opacity: 0.85;
+   transition: opacity .25s ease;
+}
+
+.image-box:hover .watermark { opacity: 1; }
+
 .info-btn {
    position: absolute;
    top: 12px;
@@ -1622,40 +1644,45 @@ body.lock-scroll { overflow: hidden; }
 
 @media (max-width: 720px) {
    .nav-wrap {
-      grid-template-columns: auto auto;
-      padding: 12px 18px;
-      gap: 12px;
+      grid-template-columns: 1fr;
+      padding: 10px 16px;
+      gap: 8px;
+      justify-items: center;
+      text-align: center;
    }
-   .brand-mark { width: 40px; height: 40px; font-size: 1.4rem; }
-   .brand-script { font-size: 1.55rem; }
-   .brand-sub { font-size: 0.62rem; letter-spacing: 0.28em; }
+   .brand { gap: 10px; }
+   .brand-mark { width: 38px; height: 38px; font-size: 1.3rem; }
+   .brand-script { font-size: 1.5rem; }
+   .brand-sub { font-size: 0.6rem; letter-spacing: 0.26em; }
 
    nav {
       grid-column: 1 / -1;
-      order: 3;
       width: 100%;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s ease;
    }
-   nav.is-open { max-height: 400px; }
    nav ul {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 2px;
-      padding: 10px 0 4px;
-      border-top: 1px solid var(--line);
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2px 4px;
+      padding: 0;
    }
-   nav ul li { display: block; }
+   nav ul li { display: inline-block; }
    nav ul li a {
-      display: block;
-      text-align: left;
-      padding: 12px 16px;
-      border-radius: 8px;
+      padding: 7px 12px;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
    }
-   .nav-toggle { display: inline-flex; }
-   .language-toggle { display: none; }
-   main { padding-top: 84px; }
+   nav ul li a::after { bottom: 2px; }
+
+   .language-toggle {
+      grid-column: 1 / -1;
+      justify-content: center;
+      font-size: 0.72rem;
+      gap: 6px;
+   }
+   .language-toggle a { padding: 4px 10px; }
+
+   .nav-toggle { display: none; }
+   main { padding-top: 150px; }
    section { padding: 0 18px; }
 }
 
@@ -1665,11 +1692,16 @@ body.lock-scroll { overflow: hidden; }
    .info-btn { opacity: 1; transform: translateY(0); padding: 5px 10px; font-size: 0.72rem; }
    .card-tags { bottom: 6px; right: 6px; }
    .card-tag-chip { font-size: 0.58rem; padding: 2px 7px; }
+   .watermark { font-size: 1rem; bottom: 8px; left: 10px; }
 
    .hero-cta + .hero-cta { margin-left: 0; margin-top: 10px; }
    .quote { padding: 16px 18px; gap: 14px; }
    .quote img { width: 48px; height: 48px; }
    .quote p { font-size: 1rem; }
+
+   nav ul li a { padding: 6px 9px; font-size: 0.72rem; }
+   .brand-script { font-size: 1.35rem; }
+   main { padding-top: 140px; }
 
    .lb-stage { padding: 70px 14px 14px; }
    .lb-nav { width: 40px; height: 40px; }
