@@ -892,7 +892,6 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    padding: 3px 9px;
    border-radius: 999px;
    letter-spacing: 0.1em;
-   text-transform: uppercase;
    border: 0;
    backdrop-filter: blur(6px);
    font-family: var(--ff-body);
