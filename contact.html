@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Contact - Prativa on Canvas</title>
-      <link rel="stylesheet" href="css/styles.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#f7f1e3" />
+
+      <title>Contact — Prativa on Canvas | Commissions & Enquiries</title>
+      <meta name="description" content="Get in touch with Prativa Debsharma for commissions, prints and enquiries. Based in Jacksonville, FL · serving collectors across the USA, India and worldwide." />
+      <meta name="keywords" content="contact Prativa Debsharma, commission watercolor artist, buy original painting, art enquiry, Jacksonville artist contact, Bengali artist commission" />
+      <meta name="author" content="Prativa Debsharma" />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://prativaoncanvas.com/contact.html" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Prativa on Canvas" />
+      <meta property="og:title" content="Contact · Prativa on Canvas" />
+      <meta property="og:description" content="Commission enquiries for Prativa Debsharma — Bengali watercolor artist, Jacksonville FL." />
+      <meta property="og:image" content="arts/art-1.jpg" />
+      <meta property="og:url" content="https://prativaoncanvas.com/contact.html" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Contact · Prativa on Canvas" />
+      <meta name="twitter:description" content="Send a commission enquiry or hello." />
+      <meta name="twitter:image" content="arts/art-1.jpg" />
+
       <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
       <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
       <link rel="shortcut icon" href="favicon/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
       <link rel="manifest" href="favicon/site.webmanifest" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      <link rel="stylesheet" href="css/styles.css" />
+
       <script src="scripts/header.js"></script>
       <script src="scripts/connect.js"></script>
       <script src="scripts/contact.js"></script>
@@ -19,22 +44,27 @@
    <body>
       <div id="header-container"></div>
       <main>
-         <section id="contact" style="padding: 0 1.5rem;">
+         <section id="contact">
             <h1>Contact Me</h1>
             <div class="contact-container">
-            <form action="https://docs.google.com/forms/d/1O9eXKaYBQcA1n9RoW9Bek0MYoEK5-Nt0C0SWqOt5ewo/formResponse" method="POST" onsubmit="handleSubmit(event)">
-               <label for="name" class="required-label">Name:</label>
-               <input type="text" id="name" name="entry.2005620554" required>
-               <label for="email" class="required-label">Email:</label>
-               <input type="email" id="email" name="entry.1045781291" required>
-               <label for="phone">Phone:</label>
-               <input type="text" id="phone" name="entry.865688963" maxlength="12" pattern="\d{10,12}">
-               <label for="reason" class="required-label">Your Query:</label>
-               <textarea id="reason" name="entry.1065046570" rows="5" required></textarea>
-               <button type="submit">Submit</button>
-            </form>
-            <div id="contact-details"></div>
-            <div id="social-media"></div>
+               <form action="https://docs.google.com/forms/d/1O9eXKaYBQcA1n9RoW9Bek0MYoEK5-Nt0C0SWqOt5ewo/formResponse" method="POST" onsubmit="handleSubmit(event)" data-testid="contact-form">
+                  <label for="name" class="required-label">Name</label>
+                  <input type="text" id="name" name="entry.2005620554" required data-testid="contact-name" />
+
+                  <label for="email" class="required-label">Email</label>
+                  <input type="email" id="email" name="entry.1045781291" required data-testid="contact-email" />
+
+                  <label for="phone">Phone</label>
+                  <input type="text" id="phone" name="entry.865688963" maxlength="12" pattern="\d{10,12}" data-testid="contact-phone" />
+
+                  <label for="reason" class="required-label">Your Query</label>
+                  <textarea id="reason" name="entry.1065046570" rows="5" required data-testid="contact-query"></textarea>
+
+                  <button type="submit" data-testid="contact-submit">Send message</button>
+               </form>
+               <div id="contact-details"></div>
+               <div id="social-media"></div>
+            </div>
          </section>
       </main>
       <footer>
