@@ -302,6 +302,49 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    position: relative;
 }
 
+/* Stacked hero used on the home page: featured photo → CTAs → welcome text */
+.hero.hero-stack {
+   grid-template-columns: 1fr;
+   gap: 36px;
+   justify-items: center;
+   text-align: center;
+   padding: 20px 24px 70px;
+}
+
+.hero.hero-stack .hero-art {
+   width: 100%;
+   max-width: 520px;
+   aspect-ratio: 4 / 5;
+   transform: rotate(-0.6deg);
+}
+
+.hero.hero-stack .hero-art img {
+   transition: opacity .35s ease;
+}
+
+.hero.hero-stack .hero-art img.is-swapping { opacity: 0; }
+
+.hero-actions {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 14px;
+   justify-content: center;
+}
+
+.hero-actions .hero-cta + .hero-cta { margin-left: 0; }
+
+.hero.hero-stack .hero-text {
+   max-width: 64ch;
+   text-align: center;
+}
+
+.hero.hero-stack .hero-text .hero-title::before { display: none; }
+
+.hero.hero-stack .hero-text .lede {
+   margin-left: auto;
+   margin-right: auto;
+}
+
 .hero-text { position: relative; }
 
 .hero-signature {
@@ -1377,12 +1420,31 @@ body.lock-scroll { overflow: hidden; }
 .lb-nav:hover { transform: translateY(-50%) scale(1.06); }
 
 .lb-stage {
+   position: relative;
    flex: 1;
    display: flex;
    align-items: center;
    justify-content: center;
    padding: 80px 80px 20px;
    min-height: 0;
+}
+
+.lb-watermark {
+   position: absolute;
+   bottom: 26px;
+   left: 28px;
+   font-family: var(--ff-script);
+   font-size: 1.6rem;
+   line-height: 1;
+   color: rgba(255, 255, 255, 0.92);
+   text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.55),
+      0 0 14px rgba(0, 0, 0, 0.4);
+   pointer-events: none;
+   user-select: none;
+   letter-spacing: 0.01em;
+   opacity: 0.88;
+   z-index: 3;
 }
 
 .lb-image {
@@ -1701,6 +1763,20 @@ body.lock-scroll { overflow: hidden; }
    .nav-toggle { display: none; }
    main { padding-top: 132px; }
    section { padding: 0 18px; }
+
+   /* Paintings tag filters wrap on mobile (no scroll arrows) */
+   .tag-scroll-container { flex-wrap: wrap; overflow: visible; }
+   .scroll-btn,
+   .scroll-btn.left-arrow,
+   .scroll-btn.right-arrow { display: none !important; }
+   .tag-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: visible;
+      white-space: normal;
+      margin: 0;
+      width: 100%;
+   }
 }
 
 @media (max-width: 560px) {
@@ -1710,6 +1786,7 @@ body.lock-scroll { overflow: hidden; }
    .card-tags { bottom: 6px; right: 6px; }
    .card-tag-chip { font-size: 0.58rem; padding: 2px 7px; }
    .watermark { font-size: 1rem; bottom: 8px; left: 10px; }
+   .lb-watermark { font-size: 1.15rem; bottom: 14px; left: 14px; }
 
    .hero-cta + .hero-cta { margin-left: 0; margin-top: 10px; }
    .quote { padding: 16px 18px; gap: 14px; }

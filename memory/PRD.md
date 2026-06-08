@@ -61,3 +61,19 @@
 - P2: Optimise images (WebP + responsive `srcset`) for faster gallery loads
 - P2: Wire a real email backend (Resend/SendGrid) instead of the Google Form
 - P2: Add an "About" mid-section on the Bengali home with the bilingual signature
+
+## Iteration — Home hero rotator + mobile tags wrap + lightbox watermark (2026-01)
+- `scripts/hero.js`: removed random-on-page-load behaviour; now auto-rotates the featured painting every 10s with a soft fade, ensuring no two consecutive picks are identical.
+- `index.html` hero markup reordered to **photo → CTAs → welcome message** (added `.hero hero-stack` and `.hero-actions` containers).
+- `css/styles.css`:
+  - New `.hero.hero-stack` layout (single column, centered, image capped 520px).
+  - Fade transition on `.hero-art img.is-swapping` (220 ms).
+  - `.lb-watermark` overlay added on the lightbox stage (bottom-left, Pinyon Script). `.lb-stage` set to `position: relative`. Tuned for ≤560 px viewports.
+  - `@media (max-width: 720px)` on the paintings page: hides the scroll arrows, makes `.tag-container` `flex-wrap: wrap`, `white-space: normal`, `overflow-x: visible`, so all tags wrap onto multiple lines on phones.
+- `paintings.html`: added `<span class="lb-watermark" data-testid="lightbox-watermark">Prativa on Canvas</span>` inside `.lb-stage`.
+
+## Verification (Jan 2026)
+- Mobile (360 × 760): `flex-wrap: wrap`, `overflow-x: visible`, scroll arrows `display: none`; tags wrap into 3 rows.
+- Lightbox (1920 × 800): "Prativa on Canvas" watermark visible bottom-left on the fullscreen image.
+- Home (1920 + 390): photo → buttons → welcome; image changed between captures within the 10 s window.
+

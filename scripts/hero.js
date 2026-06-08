@@ -1,9 +1,9 @@
 // ============================================================
 // HOME-PAGE HERO — featured painting rotator
 //
-// Add or remove painting filenames in the list below. On every
-// page load / refresh the home hero picks one at random and
-// updates the optional title shown in the corner tag.
+// Add or remove painting filenames in the list below. The hero
+// image auto-rotates every 10 seconds (no page reload needed)
+// and updates the small caption tag underneath the image.
 //
 // File names should match files inside /app/arts/
 //   • Standard A3 works:     "art-1.jpg" … "art-56.jpg"
@@ -23,30 +23,57 @@ window.HERO_FEATURED = [
 ];
 
 (function initHeroFeatured() {
-   function pick() {
+   const ROTATE_MS = 10000;
+   let idx = -1;
+
+   function nextIndex() {
       const list = window.HERO_FEATURED || [];
-      if (!list.length) return null;
-      return list[Math.floor(Math.random() * list.length)];
+      if (!list.length) return -1;
+      if (list.length === 1) return 0;
+      // pick a different one than current
+      let n;
+      do {
+         n = Math.floor(Math.random() * list.length);
+      } while (n === idx);
+      return n;
    }
 
    function apply() {
       const img = document.getElementById("hero-art-img");
       if (!img) return;
-      const choice = pick();
-      if (!choice) return;
+      const list = window.HERO_FEATURED || [];
+      if (!list.length) return;
+
+      const nextIdx = nextIndex();
+      const choice = list[nextIdx];
+      idx = nextIdx;
 
       // Use absolute /arts/ on Bengali pages, relative arts/ on English.
       const base = document.documentElement.lang === "bn" ? "/arts/" : "arts/";
-      img.src = base + choice.file;
-      img.alt = choice.title || img.alt;
 
-      const tag = document.querySelector(".hero-art .hero-tag");
-      if (tag && choice.title) tag.textContent = choice.title;
+      // Preload then swap with a small fade for a smoother transition.
+      const preloader = new Image();
+      preloader.onload = () => {
+         img.classList.add("is-swapping");
+         setTimeout(() => {
+            img.src = preloader.src;
+            img.alt = choice.title || img.alt;
+            const tag = document.querySelector(".hero-art .hero-tag");
+            if (tag && choice.title) tag.textContent = choice.title;
+            img.classList.remove("is-swapping");
+         }, 220);
+      };
+      preloader.src = base + choice.file;
+   }
+
+   function start() {
+      apply();
+      setInterval(apply, ROTATE_MS);
    }
 
    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", apply);
+      document.addEventListener("DOMContentLoaded", start);
    } else {
-      apply();
+      start();
    }
 })();
