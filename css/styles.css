@@ -238,7 +238,7 @@ nav ul li a:hover::after { transform: scaleX(1); }
 /* ---------- Layout ---------- */
 main {
    padding-top: 110px;
-   padding-bottom: 90px;
+   padding-bottom: 40px;
    min-height: calc(100vh - 200px);
 }
 
@@ -249,7 +249,7 @@ section {
    margin: 0 auto;
 }
 
-section + section { margin-top: 80px; }
+section + section { margin-top: 40px; }
 
 .eyebrow {
    display: inline-block;
@@ -312,7 +312,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    align-items: center;
    justify-items: start;
    text-align: left;
-   padding: 20px 24px 30px;
+   padding: 20px 24px 20px;
 }
 
 .hero.hero-stack .hero-text { grid-area: text; align-self: end; }
@@ -392,7 +392,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    line-height: 1.75;
    color: var(--body);
    max-width: 52ch;
-   margin-bottom: 28px;
+   margin-bottom: 0px;
    text-align: justify;
 }
 
@@ -620,7 +620,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
 /* ---------- Quotes section ---------- */
 .quotes {
    max-width: var(--maxw);
-   margin: 70px auto 0;
+   margin: 20px auto 0;
    padding: 0 24px;
 }
 
@@ -889,14 +889,14 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
 
 .info-btn {
    position: absolute;
-   top: 12px;
-   right: 12px;
+   top: 10px;
+   right: 10px;
    background: rgba(255, 255, 255, 0.94);
    color: var(--ink);
    border: 1px solid rgba(28, 31, 42, 0.08);
    border-radius: 50%;
-   width: 34px;
-   height: 34px;
+   width: 24px;
+   height: 24px;
    padding: 0;
    font-size: 0.95rem;
    cursor: pointer;
@@ -1024,7 +1024,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   margin: 0 auto 40px;
+   margin: 0 auto 0px;
    border: 1px solid var(--line);
 }
 
@@ -1823,7 +1823,7 @@ body.lock-scroll { overflow: hidden; }
 @media (max-width: 560px) {
    .image-container { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; padding: 0; }
    .image-box img { max-height: 240px; }
-   .info-btn { width: 30px; height: 30px; font-size: 0.85rem; }
+   .info-btn { width: 24px; height: 24px; font-size: 0.95rem; }
    .card-tags { bottom: 6px; right: 6px; }
    .card-tag-chip { font-size: 0.58rem; padding: 2px 7px; }
    .watermark { font-size: 1rem; bottom: 8px; left: 10px; }
