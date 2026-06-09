@@ -281,7 +281,6 @@ function renderPaintings() {
     const base          = getImageBase();
     const lang          = document.documentElement.lang;
     const watermarkText = lang === "bn" ? "প্রতিভার ক্যানভাস" : "Prativa on Canvas";
-    const infoLabel     = lang === "bn" ? "তথ্য" : "Info";
 
     window.PAINTINGS.forEach((p, index) => {
         const box = document.createElement("div");
@@ -305,7 +304,7 @@ function renderPaintings() {
         const infoBtn = document.createElement("button");
         infoBtn.className = "info-btn";
         infoBtn.type = "button";
-        infoBtn.innerHTML = '<i class="fas fa-info-circle"></i><span>' + infoLabel + '</span>';
+        infoBtn.innerHTML = '<i class="fas fa-info-circle"></i>';
         infoBtn.setAttribute("aria-label", "View painting details");
         infoBtn.setAttribute("data-testid", `painting-info-btn-${p.id}`);
         infoBtn.addEventListener("click", (e) => {
