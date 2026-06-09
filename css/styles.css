@@ -302,14 +302,22 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    position: relative;
 }
 
-/* Stacked hero used on the home page: featured photo → CTAs → welcome text */
+/* Home page hero: welcome text on the left, featured photo on the right; wraps on mobile */
 .hero.hero-stack {
-   grid-template-columns: 1fr;
-   gap: 36px;
-   justify-items: center;
-   text-align: center;
+   grid-template-columns: 1.05fr 0.95fr;
+   grid-template-areas:
+      "text art"
+      "actions art";
+   gap: 36px 56px;
+   align-items: center;
+   justify-items: start;
+   text-align: left;
    padding: 20px 24px 70px;
 }
+
+.hero.hero-stack .hero-text { grid-area: text; align-self: end; }
+.hero.hero-stack .hero-actions { grid-area: actions; align-self: start; justify-content: flex-start; }
+.hero.hero-stack .hero-art { grid-area: art; justify-self: center; align-self: center; }
 
 .hero.hero-stack .hero-art {
    width: 100%;
@@ -335,14 +343,14 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
 
 .hero.hero-stack .hero-text {
    max-width: 64ch;
-   text-align: center;
+   text-align: left;
 }
 
 .hero.hero-stack .hero-text .hero-title::before { display: none; }
 
 .hero.hero-stack .hero-text .lede {
-   margin-left: auto;
-   margin-right: auto;
+   margin-left: 0;
+   margin-right: 0;
 }
 
 .hero-text { position: relative; }
@@ -1702,6 +1710,19 @@ body.lock-scroll { overflow: hidden; }
       gap: 40px;
       padding: 20px 24px 50px;
    }
+   .hero.hero-stack {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+         "text"
+         "art"
+         "actions";
+      gap: 30px;
+      justify-items: center;
+      text-align: center;
+   }
+   .hero.hero-stack .hero-text { text-align: center; align-self: auto; }
+   .hero.hero-stack .hero-actions { justify-content: center; align-self: auto; }
+   .hero.hero-stack .hero-text .lede { margin-left: auto; margin-right: auto; }
    .hero-art { max-width: 420px; margin: 0 auto; }
    .video-player-wrap { grid-template-columns: 1fr; }
    .video-playlist { max-height: none; }
