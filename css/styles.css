@@ -312,7 +312,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    align-items: center;
    justify-items: start;
    text-align: left;
-   padding: 20px 24px 70px;
+   padding: 20px 24px 30px;
 }
 
 .hero.hero-stack .hero-text { grid-area: text; align-self: end; }
@@ -393,6 +393,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    color: var(--body);
    max-width: 52ch;
    margin-bottom: 28px;
+   text-align: justify;
 }
 
 .hero-cta {
@@ -485,7 +486,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
 /* ---------- About section ---------- */
 .about {
    max-width: var(--maxw);
-   margin: 70px auto 0;
+   margin: 20px auto 0;
    padding: 0 24px;
    display: grid;
    grid-template-columns: 0.85fr 1.15fr;
@@ -571,6 +572,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    font-size: 1.02rem;
    line-height: 1.78;
    color: var(--body);
+   text-align: justify;
 }
 
 .about-facts {
@@ -892,27 +894,26 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    background: rgba(255, 255, 255, 0.94);
    color: var(--ink);
    border: 1px solid rgba(28, 31, 42, 0.08);
-   border-radius: 999px;
-   padding: 6px 12px;
-   font-size: 0.78rem;
+   border-radius: 50%;
+   width: 34px;
+   height: 34px;
+   padding: 0;
+   font-size: 0.95rem;
    cursor: pointer;
    display: inline-flex;
    align-items: center;
-   gap: 6px;
-   font-weight: 600;
-   letter-spacing: 0.04em;
-   opacity: 0;
-   transform: translateY(-6px);
-   transition: opacity .25s ease, transform .25s ease, background .2s ease, color .2s ease;
+   justify-content: center;
+   opacity: 1;
+   transform: translateY(0);
+   transition: background .2s ease, color .2s ease, transform .2s ease;
    z-index: 2;
    backdrop-filter: blur(6px);
    font-family: var(--ff-body);
 }
 
-.image-box:hover .info-btn,
+.info-btn:hover,
 .info-btn:focus-visible {
-   opacity: 1;
-   transform: translateY(0);
+   transform: translateY(-1px);
 }
 
 .info-btn:hover {
@@ -1550,6 +1551,25 @@ body.lock-scroll { overflow: hidden; }
    flex-direction: column;
    gap: 12px;
    min-height: 360px;
+   position: relative;
+}
+
+.info-watermark {
+   position: absolute;
+   bottom: 16px;
+   left: 18px;
+   font-family: var(--ff-script);
+   font-size: 1.35rem;
+   line-height: 1;
+   color: rgba(255, 255, 255, 0.95);
+   text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.55),
+      0 0 14px rgba(0, 0, 0, 0.4);
+   pointer-events: none;
+   user-select: none;
+   letter-spacing: 0.01em;
+   opacity: 0.92;
+   z-index: 3;
 }
 
 .info-hero-img {
@@ -1708,7 +1728,7 @@ body.lock-scroll { overflow: hidden; }
    .hero {
       grid-template-columns: 1fr;
       gap: 40px;
-      padding: 20px 24px 50px;
+      padding: 20px 24px 30px;
    }
    .hero.hero-stack {
       grid-template-columns: 1fr;
@@ -1803,11 +1823,12 @@ body.lock-scroll { overflow: hidden; }
 @media (max-width: 560px) {
    .image-container { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; padding: 0; }
    .image-box img { max-height: 240px; }
-   .info-btn { opacity: 1; transform: translateY(0); padding: 5px 10px; font-size: 0.72rem; }
+   .info-btn { width: 30px; height: 30px; font-size: 0.85rem; }
    .card-tags { bottom: 6px; right: 6px; }
    .card-tag-chip { font-size: 0.58rem; padding: 2px 7px; }
    .watermark { font-size: 1rem; bottom: 8px; left: 10px; }
    .lb-watermark { font-size: 1.15rem; bottom: 14px; left: 14px; }
+   .info-watermark { font-size: 1.1rem; bottom: 14px; left: 18px; }
 
    .hero-cta + .hero-cta { margin-left: 0; margin-top: 10px; }
    .quote { padding: 16px 18px; gap: 14px; }
