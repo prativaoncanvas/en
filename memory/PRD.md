@@ -64,10 +64,10 @@
 
 ## Iteration — Home hero rotator + mobile tags wrap + lightbox watermark (2026-01)
 - `scripts/hero.js`: removed random-on-page-load behaviour; now auto-rotates the featured painting every 10s with a soft fade, ensuring no two consecutive picks are identical.
-- `index.html` hero markup reordered to **photo → CTAs → welcome message** (added `.hero hero-stack` and `.hero-actions` containers).
+- `index.html` hero: welcome message (eyebrow + signature + title + lede + CTAs) on the **left**, featured photo on the **right** — side by side on desktop, stacks on mobile via the existing `@media (max-width: 960px)` rule on `.hero`.
 - `css/styles.css`:
-  - New `.hero.hero-stack` layout (single column, centered, image capped 520px).
-  - Fade transition on `.hero-art img.is-swapping` (220 ms).
+  - Fade transition on `.hero-art img.is-swapping` (220 ms) for the 10 s rotator.
+  - `.hero-actions` flex container (wraps; second CTA no longer needs the legacy `margin-left`).
   - `.lb-watermark` overlay added on the lightbox stage (bottom-left, Pinyon Script). `.lb-stage` set to `position: relative`. Tuned for ≤560 px viewports.
   - `@media (max-width: 720px)` on the paintings page: hides the scroll arrows, makes `.tag-container` `flex-wrap: wrap`, `white-space: normal`, `overflow-x: visible`, so all tags wrap onto multiple lines on phones.
 - `paintings.html`: added `<span class="lb-watermark" data-testid="lightbox-watermark">Prativa on Canvas</span>` inside `.lb-stage`.
