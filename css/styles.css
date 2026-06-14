@@ -1258,7 +1258,7 @@ footer p::after { content: "© 2026 Prativa on Canvas. All rights reserved."; }
    justify-content: space-between;
    padding: 14px 18px;
    border-bottom: 1px solid var(--line);
-   background: var(--bg-soft);
+   background: #d9b46b;
 }
 
 .playlist-header h3 {
