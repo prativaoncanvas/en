@@ -135,7 +135,7 @@ header {
    align-items: center;
    justify-content: center;
    flex-shrink: 0;
-   height: 56px;
+   height: 72px;
    filter: drop-shadow(0 2px 6px rgba(28, 31, 42, 0.08));
    transition: transform .35s ease, filter .35s ease;
 }
@@ -151,11 +151,15 @@ header {
    font-style: italic;
    font-weight: 400;
 }
+.brand-svg-script--bold {
+   font-size: 64px;
+   font-weight: 700;
+}
 .brand-svg-sub {
    font-family: var(--ff-body), 'Cormorant Garamond', serif;
-   font-size: 14px;
-   font-weight: 600;
-   letter-spacing: 7px;
+   font-size: 15px;
+   font-weight: 800;
+   letter-spacing: 8px;
    text-transform: uppercase;
 }
 .brand:hover .brand-wordmark {
@@ -1809,7 +1813,7 @@ body.lock-scroll { overflow: hidden; }
    }
    .brand { grid-area: brand; justify-self: start; gap: 10px; }
    .brand-mark { width: 44px; height: 44px; font-size: 1.55rem; }
-   .brand-wordmark { height: 46px; }
+   .brand-wordmark { height: 54px; }
    .brand-script { font-size: 1.95rem; }
    .brand-sub { font-size: 0.66rem; letter-spacing: 0.26em; }
 
@@ -1875,7 +1879,7 @@ body.lock-scroll { overflow: hidden; }
 
    nav ul li a { padding: 7px 11px; font-size: 1.05rem; }
    .brand-mark { width: 40px; height: 40px; font-size: 1.4rem; }
-   .brand-wordmark { height: 40px; }
+   .brand-wordmark { height: 50px; }
    .brand-name--compact { display: none; }
    .brand-script { font-size: 1.75rem; }
    .brand-sub { font-size: 0.6rem; }
