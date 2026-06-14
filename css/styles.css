@@ -151,6 +151,13 @@ header {
    font-style: italic;
    font-weight: 400;
 }
+.brand-svg-sub {
+   font-family: var(--ff-body), 'Cormorant Garamond', serif;
+   font-size: 14px;
+   font-weight: 600;
+   letter-spacing: 7px;
+   text-transform: uppercase;
+}
 .brand:hover .brand-wordmark {
    transform: translateY(-1px) rotate(-0.5deg);
    filter: drop-shadow(0 4px 10px rgba(182, 90, 60, 0.18));
