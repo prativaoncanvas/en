@@ -152,12 +152,12 @@ header {
    font-weight: 400;
 }
 .brand-svg-script--bold {
-   font-size: 64px;
-   font-weight: 700;
+   font-size: 68px;
+   font-weight: 500;
 }
 .brand-svg-sub {
    font-family: var(--ff-body), 'Cormorant Garamond', serif;
-   font-size: 15px;
+   font-size: 20px;
    font-weight: 800;
    letter-spacing: 8px;
    text-transform: uppercase;
