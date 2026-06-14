@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Prativa monogram">
+   <title>Prativa</title>
+   <defs>
+      <linearGradient id="prativaRing" x1="0%" y1="0%" x2="100%" y2="100%">
+         <stop offset="0%"   stop-color="#b65a3c"/>
+         <stop offset="55%"  stop-color="#c9763f"/>
+         <stop offset="100%" stop-color="#b78a44"/>
+      </linearGradient>
+      <linearGradient id="prativaInk" x1="0%" y1="0%" x2="0%" y2="100%">
+         <stop offset="0%"   stop-color="#1c1f2a"/>
+         <stop offset="100%" stop-color="#8b3e22"/>
+      </linearGradient>
+      <linearGradient id="prativaStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+         <stop offset="0%"   stop-color="#b65a3c" stop-opacity="0"/>
+         <stop offset="35%"  stop-color="#b65a3c" stop-opacity="0.85"/>
+         <stop offset="65%"  stop-color="#b78a44" stop-opacity="0.85"/>
+         <stop offset="100%" stop-color="#b78a44" stop-opacity="0"/>
+      </linearGradient>
+   </defs>
+
+   <!-- Soft ivory disc -->
+   <circle cx="60" cy="60" r="57" fill="#f7f1e3"/>
+
+   <!-- Outer painterly ring -->
+   <circle cx="60" cy="60" r="55.5" fill="none" stroke="url(#prativaRing)" stroke-width="2.4"/>
+
+   <!-- Inner whisper ring -->
+   <circle cx="60" cy="60" r="49" fill="none" stroke="#b78a44" stroke-width="0.7" stroke-dasharray="0.6 3.2" opacity="0.55"/>
+
+   <!-- Stylised 'P' monogram -->
+   <g>
+      <!-- Bowl + stem of P, hand-drawn feel -->
+      <path d="M47 30
+               Q46 28 48 28
+               L62 28
+               Q80 28 80 45
+               Q80 62 62 62
+               L53 62
+               L53 92"
+            fill="none"
+            stroke="url(#prativaInk)"
+            stroke-width="5.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+      <!-- Inner highlight inside the bowl -->
+      <path d="M53 36 L53 54"
+            stroke="#b65a3c"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            opacity="0.85"/>
+
+      <!-- Elegant terminal flourish under the stem -->
+      <path d="M48 92 Q60 96 70 90"
+            fill="none"
+            stroke="url(#prativaInk)"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            opacity="0.7"/>
+   </g>
+
+   <!-- Painter's brush stroke at the base -->
+   <path d="M22 102 Q60 94 98 102"
+         fill="none"
+         stroke="url(#prativaStroke)"
+         stroke-width="3.2"
+         stroke-linecap="round"/>
+
+   <!-- Signature paint dot -->
+   <circle cx="83" cy="33" r="3.2" fill="#b65a3c"/>
+   <circle cx="83" cy="33" r="1.1" fill="#f7f1e3"/>
+</svg>
