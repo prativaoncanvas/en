@@ -26,6 +26,67 @@
       <meta name="twitter:description" content="Painting demos & studio vlogs." />
       <meta name="twitter:image" content="arts/art-1.jpg" />
 
+      <!-- Structured data -->
+      <script type="application/ld+json">
+      {
+         "@context": "https://schema.org",
+         "@graph": [
+            {
+               "@type": "Organization",
+               "@id": "https://prativaoncanvas.com/#organization",
+               "name": "Prativa on Canvas",
+               "alternateName": ["Prativa", "Pratibha"],
+               "url": "https://prativaoncanvas.com/",
+               "logo": {
+                  "@type": "ImageObject",
+                  "@id": "https://prativaoncanvas.com/#logo",
+                  "url": "https://prativaoncanvas.com/icons/logo.svg",
+                  "contentUrl": "https://prativaoncanvas.com/icons/logo.svg",
+                  "caption": "Prativa on Canvas",
+                  "inLanguage": "en",
+                  "width": 320,
+                  "height": 110
+               },
+               "image": ["https://prativaoncanvas.com/icons/logo.svg", "https://prativaoncanvas.com/favicon/web-app-manifest-512x512.png", "https://prativaoncanvas.com/arts/art-1.jpg"],
+               "sameAs": [
+                  "https://www.youtube.com/@PrativaOnCanvas",
+                  "https://www.facebook.com/profile.php?id=100065688631460",
+                  "https://www.instagram.com/prativaoncanvas/"
+               ]
+            },
+            {
+               "@type": "Person",
+               "@id": "https://prativaoncanvas.com/#prativa",
+               "name": "Prativa Debsharma Sarkar",
+               "alternateName": ["Prativa", "Pratibha"],
+               "jobTitle": "Watercolor Artist",
+               "url": "https://prativaoncanvas.com/",
+               "image": "https://prativaoncanvas.com/arts/prativa-potrait.jpg",
+               "worksFor": { "@id": "https://prativaoncanvas.com/#organization" }
+            },
+            {
+               "@type": "WebSite",
+               "@id": "https://prativaoncanvas.com/#website",
+               "url": "https://prativaoncanvas.com/",
+               "name": "Prativa on Canvas",
+               "publisher": { "@id": "https://prativaoncanvas.com/#organization" },
+               "inLanguage": "en"
+            },
+            {
+               "@type": "WebPage",
+               "@id": "https://prativaoncanvas.com/videos.html#webpage",
+               "url": "https://prativaoncanvas.com/videos.html",
+               "name": "Videos — Prativa on Canvas",
+               "description": "Painting demonstrations and studio vlogs by Bengali watercolor artist Prativa Debsharma Sarkar.",
+               "isPartOf": { "@id": "https://prativaoncanvas.com/#website" },
+               "about": { "@id": "https://prativaoncanvas.com/#prativa" },
+               "primaryImageOfPage": { "@id": "https://prativaoncanvas.com/#logo" },
+               "inLanguage": "en"
+            }
+         ]
+      }
+      </script>
+
       <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
       <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
       <link rel="shortcut icon" href="favicon/favicon.ico" />
