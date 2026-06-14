@@ -1,21 +1,21 @@
 {
   "name": "Prativa on Canvas",
-  "short_name": "Prativa⁽ᶜᵃⁿᵛᵃˢ⁾",
+  "short_name": "Prativa",
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png",
+      "src": "/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png",
+      "src": "/favicon/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#d4cfc4",
-  "background_color": "#d4cfc4",
+  "theme_color": "#f7f1e3",
+  "background_color": "#f7f1e3",
   "display": "standalone"
 }

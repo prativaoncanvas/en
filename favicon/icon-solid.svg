@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Prativa">
+   <title>Prativa</title>
+   <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+         <stop offset="0%"   stop-color="#fbf5e6"/>
+         <stop offset="100%" stop-color="#f1e7d0"/>
+      </linearGradient>
+      <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+         <stop offset="0%"   stop-color="#b65a3c"/>
+         <stop offset="100%" stop-color="#b78a44"/>
+      </linearGradient>
+      <linearGradient id="inkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+         <stop offset="0%"   stop-color="#1c1f2a"/>
+         <stop offset="100%" stop-color="#8b3e22"/>
+      </linearGradient>
+   </defs>
+
+   <!-- Full square warm ivory background (no transparency for home-screen icons) -->
+   <rect width="64" height="64" rx="12" ry="12" fill="url(#bgGrad)"/>
+
+   <!-- Terracotta-gold inner ring -->
+   <circle cx="32" cy="32" r="25" fill="none" stroke="url(#ringGrad)" stroke-width="2.5"/>
+
+   <!-- Bold 'P' monogram, optimized for small sizes -->
+   <path d="M24 16
+            L31 16
+            Q44 16 44 26
+            Q44 36 31 36
+            L26 36
+            L26 50"
+         fill="none"
+         stroke="url(#inkGrad)"
+         stroke-width="5"
+         stroke-linecap="round"
+         stroke-linejoin="round"/>
+
+   <!-- Paint dot signature -->
+   <circle cx="45" cy="19" r="2.6" fill="#b65a3c"/>
+</svg>
