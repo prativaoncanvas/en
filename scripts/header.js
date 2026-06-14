@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
    // Inlined SVG so it inherits the page's loaded "Pinyon Script" font
    // and the SMIL animations run alongside the page.
    const logoSVG = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 110" role="img" aria-label="Prativa on Canvas" data-testid="brand-logo-svg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 130" role="img" aria-label="Prativa on Canvas" data-testid="brand-logo-svg">
          <title>Prativa on Canvas</title>
          <defs>
             <linearGradient id="canvasFill" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -117,6 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <line x1="295" y1="89" x2="301" y2="95" stroke="#b78a44" stroke-width="3.4" stroke-linecap="round"/>
             <circle cx="292" cy="86" r="2" fill="#b65a3c"/>
          </g>
+
+         <!-- "on Canvas" sub-wordmark (always visible, integrated into the mark) -->
+         <g opacity="0" data-testid="brand-logo-subtext">
+            <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="2.0s" fill="freeze"/>
+            <text x="160" y="122" text-anchor="middle" class="brand-svg-sub" fill="#6a5b46">ON CANVAS</text>
+         </g>
       </svg>
    `;
 
@@ -125,9 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
          <div class="nav-wrap">
             <a href="index.html" class="brand" data-testid="brand-link" aria-label="Prativa on Canvas — home">
                <span class="brand-wordmark" aria-hidden="true">${logoSVG}</span>
-               <span class="brand-name brand-name--compact">
-                  <span class="brand-sub">${L.brandLine2}</span>
-               </span>
             </a>
 
             <nav id="primary-nav" data-testid="primary-nav" aria-label="Primary">
