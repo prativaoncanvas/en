@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
          <div class="nav-wrap">
             <a href="index.html" class="brand" data-testid="brand-link" aria-label="Prativa on Canvas — home">
                <span class="brand-mark" aria-hidden="true">
-				  <img src="icons/logo.png" alt="Prativa on Canvas">
+				  <img src="icons/logo.svg" alt="Prativa logo" width="50" height="50">
 			   </span>
                <span class="brand-name">
                   <span class="brand-script">${L.brandLine1}</span>
