@@ -129,6 +129,36 @@ header {
    display: block;
 }
 
+/* New animated "Prativa on Canvas" wordmark */
+.brand-wordmark {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   height: 56px;
+   filter: drop-shadow(0 2px 6px rgba(28, 31, 42, 0.08));
+   transition: transform .35s ease, filter .35s ease;
+}
+.brand-wordmark img,
+.brand-wordmark svg {
+   height: 100%;
+   width: auto;
+   display: block;
+}
+.brand-svg-script {
+   font-family: 'Pinyon Script', 'Allura', cursive;
+   font-size: 58px;
+   font-style: italic;
+   font-weight: 400;
+}
+.brand:hover .brand-wordmark {
+   transform: translateY(-1px) rotate(-0.5deg);
+   filter: drop-shadow(0 4px 10px rgba(182, 90, 60, 0.18));
+}
+
+.brand-name--compact { justify-content: center; padding-left: 2px; }
+.brand-name--compact .brand-sub { font-size: 0.78rem; letter-spacing: 0.36em; }
+
 .brand-name { display: flex; flex-direction: column; line-height: 1; }
 
 .brand-script {
@@ -1772,6 +1802,7 @@ body.lock-scroll { overflow: hidden; }
    }
    .brand { grid-area: brand; justify-self: start; gap: 10px; }
    .brand-mark { width: 44px; height: 44px; font-size: 1.55rem; }
+   .brand-wordmark { height: 46px; }
    .brand-script { font-size: 1.95rem; }
    .brand-sub { font-size: 0.66rem; letter-spacing: 0.26em; }
 
@@ -1837,6 +1868,8 @@ body.lock-scroll { overflow: hidden; }
 
    nav ul li a { padding: 7px 11px; font-size: 1.05rem; }
    .brand-mark { width: 40px; height: 40px; font-size: 1.4rem; }
+   .brand-wordmark { height: 40px; }
+   .brand-name--compact { display: none; }
    .brand-script { font-size: 1.75rem; }
    .brand-sub { font-size: 0.6rem; }
    .language-toggle { font-size: 0.56rem; }
